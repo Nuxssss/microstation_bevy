@@ -1,0 +1,21 @@
+[package]
+name = "microstation_bevy_server"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[dependencies]
+microstation_bevy_shared = { path = "../microstation_bevy_shared" }
+
+# Сервер — headless, без рендера и окна
+bevy = { workspace = true, features = [
+    "multi_threaded",
+    "debug",
+    "bevy_log"
+] }
+bevy_replicon        = { workspace = true, features = ["server"] }
+bevy_replicon_renet  = { workspace = true, features = ["server"] }
+serde                = { workspace = true }

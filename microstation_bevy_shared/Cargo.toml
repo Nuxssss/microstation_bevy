@@ -1,0 +1,14 @@
+[package]
+name = "microstation_bevy_shared"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true, features = [
+    "bevy_core_pipeline",
+    "debug",
+    "bevy_log"
+] }
+bevy_replicon_renet = { workspace = true }
+bevy_replicon = { workspace = true }
+serde = { workspace = true }

@@ -1,0 +1,9 @@
+[workspace]
+resolver = "3"
+members = ["microstation_bevy_client","microstation_bevy_server","microstation_bevy_shared"]
+
+[workspace.dependencies]
+bevy = { version = "0.18.0", default-features = false }
+bevy_replicon_renet = { version = "0.15.0", features = ["renet_netcode"] }
+bevy_replicon = { version = "0.39.0" }
+serde = { version = "1.0.228", features = ["derive"] }

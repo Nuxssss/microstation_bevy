@@ -1,0 +1,28 @@
+[package]
+name = "microstation_bevy_client"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "client"
+path = "src/main.rs"
+
+[dependencies]
+microstation_bevy_shared = { path = "../microstation_bevy_shared" }
+
+bevy = { workspace = true, features = [
+    "bevy_winit",
+    "bevy_core_pipeline",
+    "bevy_render",
+    "bevy_sprite",
+    "bevy_text",
+    "bevy_ui",
+    "bevy_asset",
+    "x11",
+    "wayland",
+    "debug",
+    "bevy_log"
+] }
+bevy_replicon_renet  = { workspace = true, features = ["client"] }
+bevy_replicon        = { workspace = true, features = ["client"] }
+serde                = { workspace = true }
