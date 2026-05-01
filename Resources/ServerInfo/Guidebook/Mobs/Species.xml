@@ -1,0 +1,36 @@
+<Document>
+  # Расы
+
+  Нанотразен нанимает разнообразные разумные виды.
+
+  <Box>
+  <GuideEntityEmbed Entity="MobArachnid" Caption="Арахнид"/>
+  <GuideEntityEmbed Entity="MobDiona" Caption="Диона"/>
+  <GuideEntityEmbed Entity="MobDwarf" Caption="Дворф"/>
+  <GuideEntityEmbed Entity="MobHuman" Caption="Человек"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="MobMoth" Caption="Ниан"/>
+  <GuideEntityEmbed Entity="MobReptilian" Caption="Унатх"/>
+  <GuideEntityEmbed Entity="MobVulpkanin" Caption="Вульпканин"/>
+  <GuideEntityEmbed Entity="MobSlimePerson" Caption="Слаймолюд"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="MobVulpkanin" Caption="Vulpkanin"/>
+  </Box>
+
+  # Расы WhiteList
+  А в этом секторе Нанотразена вам могут попаться и такие виды
+
+  <Box>
+  <GuideEntityEmbed Entity="MobAndroid" Caption="Андроид"/>
+  <GuideEntityEmbed Entity="MobFelinid" Caption="Феленид"/>
+  <GuideEntityEmbed Entity="MobHumanoidMurine" Caption="Мурин"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="MobGolem" Caption="Голем"/>
+  <GuideEntityEmbed Entity="MobAkula" Caption="Акула"/>
+  <GuideEntityEmbed Entity="MobCischi" Caption="Цисчи"/>
+  </Box>
+
+</Document>

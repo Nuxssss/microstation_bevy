@@ -1,0 +1,57 @@
+- type: job
+  id: AtmosphericTechnician
+  name: job-name-atmostech
+  description: job-description-atmostech
+  playTimeTracker: JobAtmosphericTechnician
+  subnames:
+  - Male: техник СЖО
+  - Male: газовый технолог
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 10h #10 hrs # Corvax-RoleTime
+    - !type:AgeRequirement
+      age: 4 # WL-Changes-AgeRequirement
+  startingGear: AtmosphericTechnicianGear
+  icon: "JobIconAtmosphericTechnician"
+  supervisors: job-supervisors-ce
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  - Atmospherics
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FirefighterDay
+    prototype: FireAxe
+  # WL-Skills-start
+  bonusSkillPoints: 8
+  defaultSkills:
+    Eva: 3
+    IT: 2
+    Atmospherics: 3
+    Construction: 3
+    Electrical: 3
+    Generators: 3
+  # WL-Skills-end
+
+- type: startingGear
+  id: AtmosphericTechnicianGear
+  equipment:
+    eyes: ClothingEyesGlassesMeson
+    id: AtmosPDA
+    belt: ClothingBeltUtilityEngineering
+    ears: ClothingHeadsetEngineering
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: AtmosphericTechnicianChameleonOutfit
+  job: AtmosphericTechnician
+  equipment:
+    head: ClothingHeadHelmetAtmosFire
+    mask: ClothingMaskGasAtmos
+    neck: ClothingNeckScarfStripedLightBlue
+    outerClothing: ClothingOuterSuitAtmosFire
+    gloves: ClothingHandsGlovesColorYellow

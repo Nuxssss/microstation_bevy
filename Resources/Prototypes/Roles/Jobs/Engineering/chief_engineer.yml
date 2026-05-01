@@ -1,0 +1,80 @@
+- type: job
+  id: ChiefEngineer
+  description: job-description-ce
+  name: job-name-ce
+  playTimeTracker: JobChiefEngineer
+  subnames:
+  - Male: технический директор
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 10h # Corvax-RoleTime 2.5h
+#    - !type:RoleTimeRequirement
+#      role: JobStationEngineer
+#      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 15h # Corvax-RoleTime 5h
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+    - !type:AgeRequirement
+      age: 12 # WL-Changes-AgeRequirement
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 10
+  startingGear: ChiefEngineerGear
+  icon: "JobIconChiefEngineer"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Engineering
+  - Command
+  - External
+  - ChiefEngineer
+  - Atmospherics
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  # WL-Skills-start
+  bonusSkillPoints: 4
+  defaultSkills:
+    Bureaucracy: 2
+    Eva: 3
+    IT: 3
+    Atmospherics: 3
+    Construction: 3
+    Electrical: 3
+    Generators: 3
+    ComplexDevices: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: ChiefEngineerGear
+  equipment:
+    id: CEPDA
+    eyes: ClothingEyesGlassesMeson
+    ears: ClothingHeadsetCE
+    belt: ClothingBeltUtilityEngineering
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: ChiefEngineerChameleonOutfit
+  job: ChiefEngineer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretEngineering
+    mask: ClothingMaskBreath
+    neck: ClothingNeckCloakCe
+    outerClothing: ClothingOuterWinterCE
+    gloves: ClothingHandsGlovesColorYellow
+    shoes: ClothingShoesBootsMagAdv

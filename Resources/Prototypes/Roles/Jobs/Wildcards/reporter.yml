@@ -1,0 +1,46 @@
+- type: job
+  id: Reporter
+  name: job-name-reporter
+  description: job-description-reporter
+  playTimeTracker: JobReporter
+  requirements:
+    - !type:AgeRequirement
+      age: 4 # WL-Changes-AgeRequirement
+  subnames:
+  - Male: журналист
+  - Male: корреспондент
+  - Male: телеведущий
+  - Male: радиоведущий
+  startingGear: ReporterGear
+  icon: "JobIconReporter"
+  supervisors: job-supervisors-hop
+  access:
+  - Service
+  - Maintenance
+  # WL-Skills-start
+  bonusSkillPoints: 23
+  defaultSkills:
+    Bureaucracy: 2
+    IT: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: ReporterGear
+  equipment:
+    shoes: ClothingShoesColorWhite
+    id: ReporterPDA
+    ears: ClothingHeadsetService
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: ReporterChameleonOutfit
+  job: Reporter
+  equipment:
+    head: ClothingHeadHatFedoraGrey
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    outerClothing: ClothingOuterCoatTrench
+    neck: ClothingNeckTieRed
+    gloves: ClothingHandsGlovesFingerless

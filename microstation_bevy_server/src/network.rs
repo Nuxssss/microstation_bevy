@@ -1,4 +1,3 @@
-use bevy::log;
 use bevy::prelude::*;
 use bevy_replicon::prelude::*;
 use bevy_replicon::shared::backend::connected_client::NetworkId;

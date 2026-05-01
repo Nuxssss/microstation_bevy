@@ -1,0 +1,40 @@
+- type: vendingMachineInventory
+  id: SecDrobeInventory
+  startingInventory:
+    ClothingBackpackSecurity: 3
+    ClothingBackpackSatchelSecurity: 3
+    ClothingBackpackDuffelSecurity: 3
+    ClothingUniformJumpsuitSec: 3
+    ClothingUniformJumpsuitDSS: 3 # Corvax WL
+    ClothingShoesBootsJack: 3
+    ClothingHeadHatBeretSecurity: 3
+    ClothingHeadHatBeretDSS: 3 # Corvax WL
+    ClothingHeadHatDSSSoft: 3 # Corvax WL
+    ClothingHeadHatSecsoft: 3
+    ClothingHeadBandRed: 3
+    ClothingEyesBallisticSecurity: 6 # WL-Changes: Ballistic glasses
+    ClothingMaskNeckGaiterRed: 3
+    ClothingHandsGlovesColorBlack: 3
+    ClothingHandsGlovesFingerless: 3
+    ClothingUniformJumpskirtSec: 3
+    ClothingUniformJumpsuitSecGrey: 3
+    ClothingUniformJumpskirtSecGrey: 3
+    # ClothingUniformJumpsuitSecBlue: 3 # WL-Changes: Clothing migration
+    ClothingHeadsetSecurity: 3
+    ClothingOuterWinterSec: 2
+    ClothingOuterArmorBasic: 2
+    ClothingOuterVestArmorSec: 2 # Corvax WL
+    ClothingNeckScarfStripedRed: 3
+    # ClothingOuterArmorBasicSlim: 2 # WL-Changes-RemovingSlimArmorFromSec
+    ClothingEyesBlindfold: 1
+    ClothingShoesBootsCombat: 1
+    ClothingShoesBootsWinterSec: 2
+    ClothingShoesBootsCowboyBlack: 1
+    ClothingHeadHatCowboyBlack: 1
+    ClothingHeadHelmetJustice: 1
+  contrabandInventory:
+    ClothingMaskClownSecurity: 1
+    ClothingMaskMimeSecurity: 1
+    ToyFigurineSecurity: 1
+    ToyFigurineWarden: 1
+    ToyFigurineHeadOfSecurity: 1

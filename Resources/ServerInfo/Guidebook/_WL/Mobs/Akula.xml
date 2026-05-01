@@ -1,0 +1,20 @@
+<Document>
+  # Акула
+  <Box>
+    <GuideEntityEmbed Entity="MobAkula" Caption=""/>
+  </Box>
+\n
+   Это... Ходячие двуногие акулы\n
+  <Box>
+   <GuideEntityEmbed Entity="HolosignSecurity" Caption=""/>
+   <GuideEntityEmbed Entity="MobShark" Caption="Описание в процессе написания"/>
+   <GuideEntityEmbed Entity="HolosignSecurity" Caption=""/>
+  </Box>
+
+    ## Расовые особенности
+    - Любят кровь
+    <GuideReagentEmbed Reagent="Blood"></GuideReagentEmbed>
+    <GuideReagentEmbed Reagent="InsectBlood"></GuideReagentEmbed>
+    <GuideReagentEmbed Reagent="CopperBlood"></GuideReagentEmbed>
+    <GuideReagentEmbed Reagent="AmmoniaBlood"></GuideReagentEmbed>
+</Document>

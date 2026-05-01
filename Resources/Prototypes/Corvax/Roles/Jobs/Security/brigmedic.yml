@@ -1,0 +1,67 @@
+- type: job
+  id: Brigmedic
+  name: job-name-brigmedic
+  description: job-description-brigmedic
+  playTimeTracker: JobBrigmedic
+  subnames:
+  - Male: фельдшер безопасности
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 15h
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 5h
+  - !type:AgeRequirement
+    age: 6 # WL-Changes-AgeRequirement
+  - !type:TraitsRequirement
+    inverted: true
+    traits:
+    - Muted
+  startingGear: BrigmedicGear
+  icon: "JobIconBrigmedic"
+  supervisors: job-supervisors-cmo
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Medical
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  # WL-Skills-start
+  bonusSkillPoints: 8
+  defaultSkills:
+    Bureaucracy: 2
+    Eva: 3
+    Anatomy: 2
+    Medicine: 3
+    Combat: 2
+    Weapons: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: BrigmedicGear
+  equipment:
+    eyes: ClothingEyesHudMedical
+    id: BrigmedicPDA
+    ears: ClothingHeadsetBrigmedic
+    belt: ClothingBeltMedicalFilled
+    pocket1: WeaponPistolMk58 # WL-Changes: Pistol brigmed
+  storage:
+    back:
+    - Flash
+    - MagazinePistol # WL-Changes: Pistol brigmed
+
+- type: chameleonOutfit
+  id: BrigmedicChameleonOutfit
+  job: Brigmedic
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurityMedic
+    eyes: ClothingEyesHudMedSec
+    mask: ClothingMaskBreathMedicalSecurity
+    outerClothing: ClothingOuterCoatAMG #верхняя одежда # Corvax-WL-Tweak
+    neck: ClothingNeckScarfStripedRed #шея
+    gloves: ClothingHandsGlovesLatex # перчи

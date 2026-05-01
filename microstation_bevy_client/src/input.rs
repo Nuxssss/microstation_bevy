@@ -11,30 +11,17 @@ impl Plugin for InputPlugin {
     }
 }
 
-/// Читает клавиатуру и отправляет PlayerInput на сервер через replicon.
 fn send_input(keys: Res<ButtonInput<KeyCode>>, mut commands: Commands) {
-    let mut direction = Vec2::ZERO;
-    let mut send = false;
-    if keys.pressed(KeyCode::KeyW) || keys.pressed(KeyCode::ArrowUp) {
-        direction.y += 1.0;
-        send = true;
-    }
-    if keys.pressed(KeyCode::KeyS) || keys.pressed(KeyCode::ArrowDown) {
-        direction.y -= 1.0;
-        send = true;
-    }
-    if keys.pressed(KeyCode::KeyA) || keys.pressed(KeyCode::ArrowLeft) {
-        direction.x -= 1.0;
-        send = true;
-    }
-    if keys.pressed(KeyCode::KeyD) || keys.pressed(KeyCode::ArrowRight) {
-        direction.x += 1.0;
-        send = true;
-    }
-    if send {
+    let mut direction = IVec2::ZERO;
+    direction.y += keys.pressed(KeyCode::ArrowUp) as i32;
+    direction.y -= keys.pressed(KeyCode::ArrowDown) as i32;
+    direction.x += keys.pressed(KeyCode::ArrowRight) as i32;
+    direction.x -= keys.pressed(KeyCode::ArrowLeft) as i32;
+
+    if direction != IVec2::ZERO {
         commands.client_trigger(
             PlayerInput {
-                direction: direction.normalize_or_zero(),
+                direction,
             }
         );
     }

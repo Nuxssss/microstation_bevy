@@ -9,6 +9,8 @@ use bevy_replicon_renet::netcode::{ClientAuthentication, NetcodeClientTransport}
 use microstation_bevy_shared::protocol::{PROTOCOL_ID, SERVER_ADDR, SERVER_PORT};
 
 pub struct NetworkClientPlugin;
+#[derive(Resource)]
+pub struct LocalNetworkId(pub u64);
 
 impl Plugin for NetworkClientPlugin {
     fn build(&self, app: &mut App) {
@@ -26,9 +28,11 @@ fn connect_to_server(mut commands: Commands) {
         .duration_since(SystemTime::UNIX_EPOCH)
         .unwrap();
 
+    let cid = current_time.as_millis() as u64;
+
     let authentication = ClientAuthentication::Unsecure {
         server_addr,
-        client_id: current_time.as_millis() as u64,
+        client_id: cid,
         user_data: None,
         protocol_id: PROTOCOL_ID,
     };
@@ -38,6 +42,6 @@ fn connect_to_server(mut commands: Commands) {
 
     commands.insert_resource(client);
     commands.insert_resource(transport);
-
+    commands.insert_resource(LocalNetworkId(cid));
     info!("Connect to {server_addr}");
 }

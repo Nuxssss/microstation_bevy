@@ -1,0 +1,47 @@
+- type: job
+  id: Psychologist
+  name: job-name-psychologist
+  description: job-description-psychologist
+  playTimeTracker: JobPsychologist
+  requirements:
+    - !type:AgeRequirement
+      age: 4 # WL-Changes-AgeRequirement
+  subnames:
+  - Male: психиатр
+  startingGear: PsychologistGear
+  icon: "JobIconPsychologist"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+  # WL-Skills-start
+  bonusSkillPoints: 20
+  defaultSkills:
+    Bureaucracy: 2
+    Chemistry: 2
+    Combat: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: PsychologistGear
+  equipment:
+    shoes: ClothingShoesLeather
+    id: PsychologistPDA
+    ears: ClothingHeadsetMedical
+  storage:
+    back:
+    - RubberStampPsychologist
+
+- type: chameleonOutfit
+  id: PsychologistChameleonOutfit
+  job: Psychologist
+  equipment:
+    head: ClothingHeadHatBeretMedic
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    outerClothing: ClothingOuterCoatLab
+    neck: ClothingNeckStethoscope
+    belt: ClothingBeltMedical
+    gloves: ClothingHandsGlovesLatex

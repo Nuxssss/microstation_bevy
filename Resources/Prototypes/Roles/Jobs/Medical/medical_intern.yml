@@ -1,0 +1,54 @@
+- type: job
+  id: MedicalIntern
+  name: job-name-intern
+  description: job-description-intern
+  playTimeTracker: JobMedicalIntern
+  subnames:
+  - Male: медбрат
+    Female: медсестра
+  - Male: санитар
+  - Male: ординатор
+  - Male: фармацевт-стажёр
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 10h # Corvax-RoleTime 5
+      inverted: true # stop playing intern if you're good at med!
+    - !type:AgeRequirement # WL-Changes-AgeRequirement
+      age: 2 # WL-Changes-AgeRequirement
+  startingGear: MedicalInternGear
+  icon: "JobIconMedicalIntern"
+  supervisors: job-supervisors-medicine
+  canBeAntag: true
+  access:
+  - Medical
+  - Maintenance
+  # WL-Skills-start
+  bonusSkillPoints: 19
+  defaultSkills:
+    Anatomy: 2
+    Medicine: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: MedicalInternGear
+  equipment:
+    shoes: ClothingShoesColorWhite
+    id: MedicalInternPDA
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
+    pocket2: BookMedicalReferenceBook
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: MedicalInternChameleonOutfit
+  job: MedicalIntern
+  equipment:
+    head: ClothingHeadHatBeretMedic
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLabOpened
+    gloves: ClothingHandsGlovesLatex

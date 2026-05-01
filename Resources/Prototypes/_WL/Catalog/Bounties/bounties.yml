@@ -1,0 +1,23 @@
+- type: cargoBounty
+  id: BountyFoodMeatXeno
+  reward: 15000
+  description: bounty-description-food-meat-xeno
+  idPrefix: NT-UT-
+  entries:
+  - name: bounty-item-food-meat-xeno
+    amount: 10
+    whitelist:
+      tags:
+      - MeatXeno
+
+- type: cargoBounty
+  id: BountyFoodMeatDragon
+  reward: 20000
+  description: bounty-description-food-meat-dragon
+  idPrefix: NT-UT-
+  entries:
+  - name: bounty-item-food-meat-dragon
+    amount: 6
+    whitelist:
+      tags:
+      - MeatDragon

@@ -1,0 +1,99 @@
+- type: entity
+  parent: FoodInjectableBase
+  id: FoodChickenTabaka
+  name: "char-grilled chicken"
+  description: "Soft and juicy chicken with smoke."
+  components:
+    - type: Item
+    - type: FlavorProfile
+      flavors:
+        - cischi1
+    - type: Edible
+      transferAmount: 5
+    - type: Sprite
+      sprite: _WL/Entities/Objects/Consumable/Food/cischi.rsi
+      state: chickentabaka
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 15
+          reagents:
+          - ReagentId: Nutriment
+            Quantity: 7
+          - ReagentId: Vitamin
+            Quantity: 3
+
+- type: entity
+  parent: FoodInjectableBase
+  id: FoodCutletCischi
+  name: "сischan cutlet"
+  description: "Juicy goat-scented cutlet wrapped in boiled tobacco leaf."
+  components:
+    - type: Item
+    - type: FlavorProfile
+      flavors:
+        - cischi2
+    - type: Edible
+      transferAmount: 5
+    - type: Sprite
+      sprite: _WL/Entities/Objects/Consumable/Food/cischi.rsi
+      state: cutletcischi
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 15
+          reagents:
+          - ReagentId: Nutriment
+            Quantity: 7
+          - ReagentId: Vitamin
+            Quantity: 3
+
+- type: entity
+  parent: FoodInjectableBase
+  id: FoodOnionSliceCischi
+  name: "onion rings"
+  description: "Fried onion rings with fragrant cheese in a convenient cone."
+  components:
+    - type: Item
+    - type: FlavorProfile
+      flavors:
+        - cischi3
+    - type: Edible
+      transferAmount: 5
+    - type: Sprite
+      sprite: _WL/Entities/Objects/Consumable/Food/cischi.rsi
+      state: onionslicecischi
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+          - ReagentId: Nutriment
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 5
+
+- type: entity
+  parent: FoodInjectableBase
+  id: FoodPemmican
+  name: "pemmican"
+  description: "Highly nutritious small-sized briquette."
+  components:
+  - type: FlavorProfile
+    flavors:
+      - lyrran6
+  - type: Edible
+    transferAmount: 5
+  - type: Sprite
+    sprite: _WL/Entities/Objects/Consumable/Food/cischi.rsi
+    state: pemmican
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 7
+        - ReagentId: Vitamin
+          Quantity: 3
+  - type: Item

@@ -1,0 +1,14 @@
+- type: species
+  id: Dwarf
+  name: species-name-dwarf
+  roundStart: false # WL Workers remove round start Vox and Dwarf
+  prototype: MobDwarf
+  sprites: MobHumanSprites
+  markingLimits: MobHumanMarkingLimits
+  dollPrototype: MobDwarfDummy
+  skinColoration: HumanToned
+  # Corvax-SpeciesAgeLore-Start
+  youngAge: 60
+  oldAge: 300
+  maxAge: 600
+  # Corvax-SpeciesAgeLore-End

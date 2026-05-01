@@ -1,11 +1,11 @@
-use bevy::log;
 use bevy::prelude::*;
 use bevy_replicon::prelude::*;
 use bevy_replicon::shared::backend::connected_client::NetworkId;
 use microstation_bevy_shared::{
-    components::player::{Player, PlayerPosition},
+    components::player::Player,
     events::PlayerInput,
 };
+use microstation_bevy_shared::world::Position;
 
 pub struct GamePlugin;
 
@@ -27,7 +27,7 @@ fn spawn_player(
     commands
         .entity(trigger.entity)
         .insert(Player { client_id: id })
-        .insert(PlayerPosition(Vec2::ZERO))
+        .insert(Position(IVec2::ZERO))
         .insert(Replicated);
     info!("Spawned player {id}");
 }
@@ -35,9 +35,9 @@ fn spawn_player(
 fn handle_player_input(
     trigger: On<FromClient<PlayerInput>>,
     time: Res<Time>,
-    mut player_positions: Query<&mut PlayerPosition>
+    mut player_positions: Query<&mut Position>
 ) {
     let ClientId::Client(e) = trigger.client_id else {return};
     let mut pos = player_positions.get_mut(e).unwrap();
-    pos.0 += trigger.direction * PLAYER_SPEED * time.delta_secs();
+    pos.0 += trigger.direction;
 }

@@ -1,0 +1,101 @@
+- type: entity
+  id: RoseBoxFake
+  parent: BaseItem
+  name: bouquet of flowers in a box
+  suffix: Fake
+  description: A bouquet of elite flowers that does not look like its weight. The label says they're roses.
+  components:
+    - type: SpawnItemsOnUse
+      items:
+        - id: WeaponShotgunKammerer
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+    - type: Sprite
+      sprite: _WL/Entities/Objects/Misc/rosebox.rsi
+      state: icon
+    - type: StaticPrice
+      price: 1000
+
+
+- type: entity
+  id: RoseBox
+  parent: BaseItem
+  name: bouquet of flowers in a box
+  description: A bouquet of elite flowers. The label says they're roses.
+  components:
+    - type: SpawnItemsOnUse
+      items:
+        - id: RoseRed
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+    - type: Sprite
+      sprite: _WL/Entities/Objects/Misc/rosebox.rsi
+      state: icon
+    - type: StaticPrice
+      price: 550
+
+- type: entity
+  parent: ProduceBase
+  id: RoseBase
+  name: rose
+  description: Artificially grown roses from plantations. A nice gift for your girlfriend.
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: _WL/Objects/Misc/rose.rsi
+    - type: Clothing
+      slots:
+      - HEAD
+    - type: MeleeWeapon
+      attackRate: 1
+      damage:
+        types:
+          Piercing: 5
+    - type: StaminaDamageOnHit
+      damage: 5
+    - type: StaticPrice
+      price: 500
+
+- type: entity
+  parent: RoseBase
+  id: RoseRed
+  components:
+    - type: Sprite
+      state: rose_red
+    - type: Clothing
+      clothingVisuals:
+        head:
+        - state: rose_red_equipped-HELMET
+
+- type: entity
+  parent: RoseBase
+  id: RosePink
+  components:
+    - type: Sprite
+      state: rose_pink
+    - type: Clothing
+      clothingVisuals:
+        head:
+        - state: rose_pink_equipped-HELMET
+
+- type: entity
+  parent: RoseBase
+  id: RoseWhite
+  components:
+    - type: Sprite
+      state: rose_white
+    - type: Clothing
+      clothingVisuals:
+        head:
+        - state: rose_white_equipped-HELMET
+
+- type: entity
+  parent: RoseBase
+  id: RoseYellow
+  components:
+    - type: Sprite
+      state: rose_yelo
+    - type: Clothing
+      clothingVisuals:
+        head:
+        - state: rose_yelo_equipped-HELMET

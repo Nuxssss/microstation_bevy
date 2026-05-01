@@ -9,6 +9,20 @@ bevy = { workspace = true, features = [
     "debug",
     "bevy_log"
 ] }
+
 bevy_replicon_renet = { workspace = true }
 bevy_replicon = { workspace = true }
 serde = { workspace = true }
+serde-saphyr = { workspace = true }
+serde_nested_with = { workspace = true }
+phf = { workspace = true }
+
+anyhow = "1.0.102"
+walkdir = "2.5.0"
+serde_with = "3.18.0"
+serde_json = "1.0.149"
+enum_dispatch = "0.3.13"
+serde-inline-default = "1.0.1"
+
+[features]
+client = ["bevy/bevy_sprite"]

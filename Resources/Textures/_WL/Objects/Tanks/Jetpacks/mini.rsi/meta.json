@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprites by baohe, discord: baohe (1145019224566288424)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon",
+      "directions": 1
+    },
+    {
+      "name": "icon-on",
+      "directions": 1,
+      "delays": [
+        [
+          0.5,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "equipped-BACKPACK",
+      "directions": 4
+    },
+    {
+      "name": "on-equipped-BACKPACK",
+      "directions": 4,
+      "delays": [
+        [
+          0.5,
+          0.2,
+          0.1
+        ],
+        [
+          0.5,
+          0.2,
+          0.1
+        ],
+        [
+          0.5,
+          0.2,
+          0.1
+        ],
+        [
+          0.5,
+          0.2,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "equipped-SUITSTORAGE",
+      "directions": 4
+    },
+    {
+      "name": "on-equipped-SUITSTORAGE",
+      "directions": 4,
+      "delays": [
+        [
+          0.5,
+          0.2,
+          0.1
+        ],
+        [
+          0.5,
+          0.2,
+          0.1
+        ],
+        [
+          0.5,
+          0.2,
+          0.1
+        ],
+        [
+          0.5,
+          0.2,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

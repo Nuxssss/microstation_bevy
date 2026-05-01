@@ -1,0 +1,36 @@
+#Neck
+- type: loadout
+  id: MedicalStethoscope
+  equipment:
+    neck: ClothingNeckStethoscope
+
+- type: loadout
+  id: MedicalShoesColorBrown
+  equipment:
+    shoes: ClothingShoesColorBrown
+
+- type: loadout
+  id: BoxFolderClipboard
+  storage:
+    back:
+    - BoxFolderClipboard
+
+- type: loadout
+  id: MedSoft
+  equipment:
+    head: ClothingHeadHatMedSoft
+
+- type: loadout
+  id: PathologistJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPathologist
+
+- type: loadout
+  id: NurseJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNurse
+
+- type: loadout
+  id: NurseJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtNurse

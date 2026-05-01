@@ -1,0 +1,55 @@
+- type: job
+  id: TechnicalAssistant
+  name: job-name-technical-assistant
+  description: job-description-technical-assistant
+  playTimeTracker: JobTechnicalAssistant
+  subnames:
+  - Male: инженер-стажёр
+  - Male: ремонтный техник
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 1h
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 10h # Corvax-RoleTime
+      inverted: true # stop playing intern if you're good at engineering!
+  startingGear: TechnicalAssistantGear
+  icon: "JobIconTechnicalAssistant"
+  supervisors: job-supervisors-engineering
+  canBeAntag: true
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  # WL-Skills-start
+  bonusSkillPoints: 18
+  defaultSkills:
+    IT: 2
+    Atmospherics: 2
+    Construction: 2
+    Electrical: 2
+    Generators: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: TechnicalAssistantGear
+  equipment:
+    shoes: ClothingShoesBootsWork
+    id: TechnicalAssistantPDA
+    belt: ClothingBeltUtilityEngineering
+    ears: ClothingHeadsetEngineering
+    pocket2: BookEngineersHandbook
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: TechnicalAssistantChameleonOutfit
+  job: TechnicalAssistant
+  equipment:
+    head: ClothingHeadHatHardhatOrange
+    eyes: ClothingEyesGlassesMeson
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedOrange
+    outerClothing: ClothingOuterVestHazard
+    gloves: ClothingHandsGlovesColorYellow

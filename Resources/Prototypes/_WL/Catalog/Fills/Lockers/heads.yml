@@ -1,0 +1,21 @@
+- type: entityTable
+  id: LockerFillAdjutant
+  table: !type:AllSelector
+    children:
+      - id: ClothingHeadsetCommand
+      - id: ClothingEyesHudCommand
+      - id: RubberStampAdjutant
+      - id: ClothingBackpackAdjutant
+      - id: ClothingBackpackDuffelAdjutant
+      - id: ClothingBackpackSatchelAdjutant
+      - id: BoxFolderClipboardThreePapers
+
+- type: entity
+  id: LockerAdjutantFilled
+  suffix: Filled
+  parent: LockerAdjutant
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillAdjutant

@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseThiefStealAnimalObjective
+  id: GoldieStealObjective
+  components:
+  - type: NotJobRequirement
+    jobs: [ Detective, SecurityOfficer, HeadOfSecurity ]
+  - type: StealCondition
+    stealGroup: AnimalGoldie
+  - type: Objective
+    difficulty: 1

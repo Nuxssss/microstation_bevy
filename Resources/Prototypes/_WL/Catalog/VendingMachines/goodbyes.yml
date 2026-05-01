@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: CorpDrobeGoodbyes
+  values:
+    prefix: thankyou-corp-
+    count: 3
+
+- type: localizedDataset
+  id: FashionOMatGoodbyes
+  values:
+    prefix: thankyou-fashion-
+    count: 4

@@ -1,0 +1,102 @@
+- type: guideEntry
+  id: Species
+  name: guide-entry-species
+  text: "/ServerInfo/Guidebook/Mobs/Species.xml"
+  children:
+    - Arachnid
+    - Diona
+    - Dwarf
+    - Human
+    - Moth
+    - Reptilian
+    - SlimePerson
+    #- Vulpkanin # WL-Changes
+    - Vox
+#Corvax WhiteList
+    - Akula
+    - Android
+    - Cischi
+    - Felinid
+    - Golem
+    - Murine
+    - CorvaxVulpkanin
+#Corvax WhiteList-End
+
+- type: guideEntry
+  id: Arachnid
+  name: species-name-arachnid
+  text: "/ServerInfo/Guidebook/Mobs/Arachnid.xml"
+
+- type: guideEntry
+  id: Diona
+  name: species-name-diona
+  text: "/ServerInfo/Guidebook/Mobs/Diona.xml"
+
+- type: guideEntry
+  id: Dwarf
+  name: species-name-dwarf
+  text: "/ServerInfo/Guidebook/Mobs/Dwarf.xml"
+
+- type: guideEntry
+  id: Human
+  name: species-name-human
+  text: "/ServerInfo/Guidebook/Mobs/Human.xml"
+
+- type: guideEntry
+  id: Moth
+  name: species-name-moth
+  text: "/ServerInfo/Guidebook/Mobs/Moth.xml"
+
+- type: guideEntry
+  id: Reptilian
+  name: species-name-reptilian
+  text: "/ServerInfo/Guidebook/Mobs/Reptilian.xml"
+
+- type: guideEntry
+  id: SlimePerson
+  name: species-name-slime
+  text: "/ServerInfo/Guidebook/Mobs/SlimePerson.xml"
+
+- type: guideEntry
+  id: Vox
+  name: species-name-vox
+  text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
+
+#Corvax WhiteList
+- type: guideEntry
+  id: Akula
+  name: species-name-akula
+  text: "/ServerInfo/Guidebook/_WL/Mobs/Akula.xml"
+
+- type: guideEntry
+  id: Android
+  name: species-name-android
+  text: "/ServerInfo/Guidebook/_WL/Mobs/Android.xml"
+
+- type: guideEntry
+  id: Cischi
+  name: species-name-cischi
+  text: "/ServerInfo/Guidebook/_WL/Mobs/Cischi.xml"
+
+- type: guideEntry
+  id: Felinid
+  name: species-name-felinid
+  text: "/ServerInfo/Guidebook/_WL/Mobs/Felinid.xml"
+
+- type: guideEntry
+  id: Golem
+  name: species-name-golem
+  text: "/ServerInfo/Guidebook/_WL/Mobs/Golem.xml"
+
+- type: guideEntry
+  id: Murine
+  name: species-name-murine
+  text: "/ServerInfo/Guidebook/_WL/Mobs/Murine.xml"
+#Corvax WhiteList-End
+
+# WL-Changes-start
+# - type: guideEntry
+  # id: Vulpkanin
+  # name: species-name-vulpkanin
+  # text: "/ServerInfo/Guidebook/Mobs/Vulpkanin.xml"
+# WL-Changes-end

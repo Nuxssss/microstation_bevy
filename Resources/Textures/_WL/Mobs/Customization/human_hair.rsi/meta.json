@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Skyrat-tg at https://github.com/Skyrat-SS13/Skyrat-tg/commit/ad654e76b4c5dd3972cd2a07eb2d4f9658965807; fluffycurls, twilight, shortstraightparted, shortstraight, moonprince, messyart, maletowa, longstraight, longlowstraightponytail, Kioku, jimmy, hank, denki, armetaj, pigtail, ponytail_long, ponytail_short, short_cute, short_cute2 made by discord:reartint, spikyponytailalt by NEBULON",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "verybadlycut",
+      "directions": 4
+    },
+    {
+      "name": "ponytail8",
+      "directions": 4
+    },
+    {
+      "name": "overeyetwo",
+      "directions": 4
+    },
+    {
+      "name": "shavedmohawk",
+      "directions": 4
+    },
+    {
+      "name": "emo2",
+      "directions": 4
+    },
+    {
+      "name": "comet",
+      "directions": 4
+    },
+    {
+      "name": "bedheadv4",
+      "directions": 4
+    },
+    {
+      "name": "allthefuzz",
+      "directions": 4
+    },
+    {
+      "name": "pigtail",
+      "directions": 4
+    },
+    {
+      "name": "ponytail_long",
+      "directions": 4
+    },
+    {
+      "name": "ponytail_short",
+      "directions": 4
+    },
+    {
+      "name": "short_cute",
+      "directions": 4
+    },
+    {
+      "name": "short_cute2",
+      "directions": 4
+    },
+    {
+      "name": "armetaj",
+      "directions": 4
+    },
+    {
+      "name": "denki",
+      "directions": 4
+    },
+    {
+      "name": "hank",
+      "directions": 4
+    },
+    {
+      "name": "jimmy",
+      "directions": 4
+    },
+    {
+      "name": "kioku",
+      "directions": 4
+    },
+    {
+      "name": "longlowstraightponytail",
+      "directions": 4
+    },
+    {
+      "name": "longstraight",
+      "directions": 4
+    },
+    {
+      "name": "maletowa",
+      "directions": 4
+    },
+    {
+      "name": "messyart",
+      "directions": 4
+    },
+    {
+      "name": "moonprince",
+      "directions": 4
+    },
+    {
+      "name": "shortstraight",
+      "directions": 4
+    },
+    {
+      "name": "shortstraightparted",
+      "directions": 4
+    },
+    {
+      "name": "twilight",
+      "directions": 4
+    },
+    {
+      "name": "fluffycurls",
+      "directions": 4
+    },
+    {
+      "name": "spikyponytailalt",
+      "directions": 4
+    }
+  ]
+}

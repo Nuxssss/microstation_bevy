@@ -1,0 +1,4 @@
+- type: sourcePort
+  id: TurretMinderConsoleConnect
+  name: signal-port-name-prTurretMinderConsoleConnectessed
+  description: signal-port-description-TurretMinderConsoleConnect

@@ -1,0 +1,82 @@
+- type: job
+  id: HeadOfSecurity
+  name: job-name-hos
+  description: job-description-hos
+  playTimeTracker: JobHeadOfSecurity
+  subnames:
+  - Male: директор безопасности
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 10h # Corvax-RoleTime 1
+    #- !type:RoleTimeRequirement
+    #  role: JobDetective
+    #  time: 1h # knowing how to use the tools is important
+    #- !type:RoleTimeRequirement
+    #  role: JobSecurityOfficer
+    #  time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 50h # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+    - !type:AgeRequirement
+      age: 9 # WL-Changes-AgeRequirement
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 10
+  startingGear: HoSGear
+  icon: "JobIconHeadOfSecurity"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - HeadOfSecurity
+  - Command
+  - Brig
+  - Security
+  - Armory
+  - Maintenance
+  - External
+  - Detective
+  - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  # WL-Skills-start
+  bonusSkillPoints: 8
+  defaultSkills:
+    Bureaucracy: 3
+    Eva: 3
+    Piloting: 2
+    Forensics: 2
+    Combat: 2
+    Weapons: 3
+  # WL-Skills-end
+
+- type: startingGear
+  id: HoSGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    id: HoSPDA
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+
+- type: chameleonOutfit
+  id: HeadOfSecurityChameleonOutfit
+  job: HeadOfSecurity
+  hasMindShield: true
+  equipment:
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckCloakHos

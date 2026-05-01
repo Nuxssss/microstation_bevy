@@ -1,0 +1,76 @@
+# Not(tm) Best job.
+
+- type: job
+  id: ChiefMedicalOfficer
+  name: job-name-cmo
+  description: job-description-cmo
+  playTimeTracker: JobChiefMedicalOfficer
+  subnames:
+  - Male: медицинский директор
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 5h # Corvax-RoleTime 2.5h
+#    - !type:RoleTimeRequirement
+#      role: JobMedicalDoctor
+#      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 15h # Corvax-RoleTime 10h
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+    - !type:AgeRequirement
+      age: 12 # WL-Changes-AgeRequirement
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 10
+  startingGear: CMOGear
+  icon: "JobIconChiefMedicalOfficer"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Medical
+  - Command
+  - Maintenance
+  - Chemistry
+  - ChiefMedicalOfficer
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  # WL-Skills-start
+  bonusSkillPoints: 8
+  defaultSkills:
+    Bureaucracy: 2
+    Anatomy: 3
+    Chemistry: 2
+    Medicine: 3
+  # WL-Skills-end
+
+- type: startingGear
+  id: CMOGear
+  equipment:
+    id: CMOPDA
+    ears: ClothingHeadsetCMO
+    belt: ClothingBeltMedicalFilled
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: ChiefMedicalOfficerChameleonOutfit
+  job: ChiefMedicalOfficer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretCmo
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingCloakCmo
+    outerClothing: ClothingOuterCoatLabCmo
+    gloves: ClothingHandsGlovesNitrile

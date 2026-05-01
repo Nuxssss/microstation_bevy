@@ -8,7 +8,7 @@ name = "client"
 path = "src/main.rs"
 
 [dependencies]
-microstation_bevy_shared = { path = "../microstation_bevy_shared" }
+microstation_bevy_shared = { path = "../microstation_bevy_shared", features = ["client"] }
 
 bevy = { workspace = true, features = [
     "bevy_winit",
@@ -21,8 +21,11 @@ bevy = { workspace = true, features = [
     "x11",
     "wayland",
     "debug",
-    "bevy_log"
+    "bevy_log",
+    "2d"
 ] }
 bevy_replicon_renet  = { workspace = true, features = ["client"] }
 bevy_replicon        = { workspace = true, features = ["client"] }
 serde                = { workspace = true }
+thiserror = "2.0.18"
+serde_json = "1.0.149"

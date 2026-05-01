@@ -1,0 +1,49 @@
+- type: job
+  id: ResearchAssistant
+  name: job-name-research-assistant
+  description: job-description-research-assistant
+  playTimeTracker: JobResearchAssistant
+  subnames:
+  - Male: лаборант
+  - Male: младший научный сотрудник
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 10h # Corvax-RoleTime 5
+      inverted: true # stop playing intern if you're good at science!
+    - !type:AgeRequirement # WL-Changes-AgeRequirement
+      age: 2 # WL-Changes-AgeRequirement
+  startingGear: ResearchAssistantGear
+  icon: "JobIconResearchAssistant"
+  supervisors: job-supervisors-science
+  canBeAntag: true
+  access:
+  - Research
+  - Maintenance
+  # WL-Skills-start
+  bonusSkillPoints: 23
+  defaultSkills:
+    Science: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: ResearchAssistantGear
+  equipment:
+    shoes: ClothingShoesColorWhite
+    id: ResearchAssistantPDA
+    ears: ClothingHeadsetScience
+    pocket2: BookScientistsGuidebook
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: ResearchAssistantChameleonOutfit
+  job: ResearchAssistant
+  equipment:
+    head: ClothingHeadHatCardborg
+    eyes: ClothingEyesGlasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckScarfStripedPurple
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex

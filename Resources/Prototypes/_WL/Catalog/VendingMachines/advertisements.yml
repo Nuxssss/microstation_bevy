@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: CorpDrobeAds
+  values:
+    prefix: advertisement-corp-
+    count: 5
+
+- type: localizedDataset
+  id: FashionOMatAds
+  values:
+    prefix: advertisement-fashion-
+    count: 5

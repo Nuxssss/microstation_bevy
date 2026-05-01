@@ -1,0 +1,116 @@
+# Command
+- type: roleLoadout
+  id: JobIAA
+  groups:
+  # - Inventory # Corvax-Loadouts #Corvax-WL-Remove
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  - WLNeck # WL-Changes: Neck add
+  - GroupSpeciesBreathTool
+
+# Engineering
+- type: roleLoadout
+  id: JobSeniorEngineer
+  groups:
+  # - Inventory # Corvax-Loadouts #Corvax-WL-Remove
+  - GroupTankHarness
+  - SeniorEngineerHead
+  - SeniorEngineerJumpsuit
+  - SeniorEngineerBackpack
+  - SeniorEngineerOuterClothing
+  - SeniorEngineerShoes
+  - SurvivalExtended
+  - Trinkets
+  - WLNeck # WL-Changes: Neck add
+  - GroupSpeciesBreathTool
+
+# Science
+- type: roleLoadout
+  id: JobSeniorResearcher
+  groups:
+  # - Inventory # Corvax-Loadouts #Corvax-WL-Remove
+  - GroupTankHarness
+  - SeniorResearcherHead
+  - SeniorResearcherJumpsuit
+  - SeniorResearcherBackpack
+  - SeniorResearcherOuterClothing
+  - SeniorResearcherGloves
+  - SeniorResearcherShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - WLNeck # WL-Changes: Neck add
+  - GroupSpeciesBreathTool
+
+# Security
+- type: roleLoadout
+  id: JobPilot
+  groups:
+  # - Inventory # Corvax-Loadouts #Corvax-WL-Remove
+  - PilotHead
+  - PilotJumpsuit
+  - SecurityBackpack
+  - PilotOuterClothing
+  - SecurityBelt
+  - SecurityShoes
+  - SurvivalSecurity
+  - Trinkets
+  - WLNeck # WL-Changes: Neck add
+  - PilotBadges # WL-Changes
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: JobBrigmedic
+  groups:
+  # - Inventory # Corvax-Loadouts #Corvax-WL-Remove
+  - BrigmedicHead
+  - BrigmedicMask
+  - BrigmedicJumpsuit
+  - BrigmedicGloves
+  - BrigmedicBackpack
+  - BrigmedicOuterClothing
+  - BrigmedicShoes
+  - SurvivalMedical
+  - Trinkets
+  - WLNeck # WL-Changes: Neck add
+  - BrigMedicBadges # WL-Changes
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: JobSeniorOfficer
+  groups:
+  # - Inventory # Corvax-Loadouts #Corvax-WL-Remove
+  - SeniorOfficerHead
+  - SeniorOfficerJumpsuit
+  - SeniorOfficerBackpack
+  - SeniorOfficerOuterClothing
+  - SeniorOfficerShoes
+  - SeniorOfficerBelt
+  - SurvivalSecurity
+  - Trinkets
+  - WLNeck # WL-Changes: Neck add
+  - InstructorBadges # WL-Changes
+  - GroupSpeciesBreathToolSecurity
+
+# Medical
+- type: roleLoadout
+  id: JobSeniorPhysician
+  groups:
+  # - Inventory # Corvax-Loadouts #Corvax-WL-Remove
+  - GroupTankHarness
+  - SeniorPhysicianHead
+  - MedicalMask
+  - SeniorPhysicianJumpsuit
+  - MedicalGloves
+  - SeniorPhysicianBackpack
+  - SeniorPhysicianOuterClothing
+  - SeniorPhysicianShoes
+  - Glasses
+  - SurvivalMedical
+  - MedicalDoctorNeck # WL-Changes
+  - Trinkets
+  - WLNeck # WL-Changes: Neck add
+  - GroupSpeciesBreathToolMedical

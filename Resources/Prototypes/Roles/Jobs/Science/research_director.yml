@@ -1,0 +1,69 @@
+- type: job
+  id: ResearchDirector
+  name: job-name-rd
+  description: job-description-rd
+  playTimeTracker: JobResearchDirector
+  subnames:
+  - Male: директор исследований
+  requirements:
+    #- !type:RoleTimeRequirement
+    #  role: JobScientist
+    #  time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 15h # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+    - !type:AgeRequirement
+      age: 12 # WL-Changes-AgeRequirement
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 10
+  startingGear: ResearchDirectorGear
+  icon: "JobIconResearchDirector"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Research
+  - Command
+  - Maintenance
+  - ResearchDirector
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  # WL-Skills-start
+  bonusSkillPoints: 15
+  defaultSkills:
+    Bureaucracy: 2
+    IT: 2
+    ComplexDevices: 3
+    Science: 3
+  # WL-Skills-end
+
+- type: startingGear
+  id: ResearchDirectorGear
+  equipment:
+    id: RnDPDA
+    ears: ClothingHeadsetRD
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: ResearchDirectorChameleonOutfit
+  job: ResearchDirector
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretRND
+    eyes: ClothingEyesGlasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckCloakRd
+    outerClothing: ClothingOuterCoatRD
+    gloves: ClothingHandsGlovesRNDhands # WL-Changes: Resprite Day

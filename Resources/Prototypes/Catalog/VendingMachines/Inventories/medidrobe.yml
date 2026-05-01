@@ -1,0 +1,37 @@
+- type: vendingMachineInventory
+  id: MediDrobeInventory
+  startingInventory:
+    ClothingBackpackDuffelMedical: 4
+    ClothingBackpackMedical: 4
+    ClothingBackpackSatchelMedical: 4
+    ClothingUniformJumpsuitMedicalDoctor: 4
+    ClothingUniformJumpskirtMedicalDoctor: 4
+    ClothingBeltMedical: 4
+    ClothingHeadHatBeretMedic: 4
+    ClothingHeadNurseHat: 4
+    ClothingOuterCoatLab: 4
+    ClothingShoesColorWhite: 4
+    ClothingHandsGlovesLatex: 4
+    ClothingHandsGlovesNitrile: 2
+    ClothingHeadsetMedical: 4
+    ClothingOuterWinterMed: 2
+    ClothingOuterHospitalGown: 5
+    UniformScrubsColorGreen: 4
+    UniformScrubsColorBlue: 4
+    UniformScrubsColorPurple: 4
+    ClothingHeadHatSurgcapGreen: 4
+    ClothingHeadHatSurgcapBlue: 4
+    ClothingHeadHatSurgcapPurple: 4
+    ClothingShoesBootsWinterMed: 2
+    #WL-Changes: New clothing start
+    ClothingNeckTieMed: 2
+    ClothingUniformJumpsuitNurse: 3
+    ClothingUniformJumpskirtNurse: 3
+    ClothingUniformJumpsuitPathologist: 3
+    ClothingHeadHatMedSoft: 3
+    #WL-Changes: New clothing end
+  contrabandInventory:
+    ClothingUniformJumpskirtOfLife: 1
+    ToyFigurineMedicalDoctor: 1
+    ToyFigurineParamedic: 1
+    ToyFigurineChiefMedicalOfficer: 1

@@ -1,0 +1,39 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitSafetyMothPoisoning
+  name: "Nian the Guardian - Poisoning"
+  description: "This information poster uses Nian the Guardian to tell readers that donuts should not be poisoned."
+  components:
+  - type: Sprite
+    sprite: _WL/Entities/Structures/Wallmounts/posters.rsi
+    state: poster1_legit
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitSafetyMothBoH
+  name: "Nian-the Guardian - BSR"
+  description: "This information poster uses a guardian Novel to inform the reader about the dangers of bluespace backpacks."
+  components:
+  - type: Sprite
+    sprite: _WL/Entities/Structures/Wallmounts/posters.rsi
+    state: poster2_legit
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitSafetyMothSmokey
+  name: "Nian the Guardian - Do you smoke?"
+  description: "This information poster uses Nian the Guardian to promote the safe handling of plasma, or the fight against arson. We don't know."
+  components:
+  - type: Sprite
+    sprite: _WL/Entities/Structures/Wallmounts/posters.rsi
+    state: poster3_legit
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitSafetyMothSupermatter
+  name: "Nian the Guardian is a Supermaterial"
+  description: "This information poster uses Nian the Guardian to promote proper safety practices when working near a supermaterial crystal."
+  components:
+  - type: Sprite
+    sprite: _WL/Entities/Structures/Wallmounts/posters.rsi
+    state: poster4_legit

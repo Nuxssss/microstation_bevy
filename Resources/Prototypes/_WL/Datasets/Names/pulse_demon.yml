@@ -1,0 +1,11 @@
+﻿# - type: localizedDataset
+#   id: pulse_demon_adjective
+#   values:
+#     prefix: pulse-demon-adjective-dataset-
+#     count: 55
+
+# - type: dataset
+#   id: pulse_demon_noun
+#   values:
+#     prefix: pulse-demon-noun-dataset-
+#     count: 74

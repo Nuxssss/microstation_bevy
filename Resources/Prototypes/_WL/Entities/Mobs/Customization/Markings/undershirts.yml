@@ -1,0 +1,551 @@
+- type: marking
+  id: UndershirtShirtBand
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: band
+
+- type: marking
+  id: UndershirtPoloBlue
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: bluepolo
+
+- type: marking
+  id: UndershirtShirtSportBlue
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: blueshirtsport
+
+- type: marking
+  id: UndershirtPoloGrayYellow
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: grayyellowpolo
+
+- type: marking
+  id: UndershirtShirtSportGreen
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: greenshirtsport
+
+- type: marking
+  id: UndershirtShirtIan
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: ian
+
+- type: marking
+  id: UndershirtShirtIlovent
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: ilovent
+
+- type: marking
+  id: UndershirtShirtLover
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: lover
+
+- type: marking
+  id: UndershirtShirtMatroska
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: matroska
+
+- type: marking
+  id: UndershirtShirtPeace
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: peace
+
+- type: marking
+  id: UndershirtShirtPogoman
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: pogoman
+
+- type: marking
+  id: UndershirtPoloRed
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: redpolo
+
+- type: marking
+  id: UndershirtShirtSportRed
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: redshirtsport
+
+- type: marking
+  id: UndershirtTopRed
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: redtop
+
+- type: marking
+  id: UndershirtShirtAlien
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_alien
+
+- type: marking
+  id: UndershirtShirtAssblastusa
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_assblastusa
+
+- type: marking
+  id: UndershirtJerseyBlue
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_bluejersey
+
+- type: marking
+  id: UndershirtShirtClown
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_clown
+
+- type: marking
+  id: UndershirtShirtCommie
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_commie
+
+- type: marking
+  id: UndershirtShirtMeat
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_meat
+
+- type: marking
+  id: UndershirtShirtNano
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_nano
+
+- type: marking
+  id: UndershirtShirtQuestion
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_question
+
+- type: marking
+  id: UndershirtJerseyRed
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_redjersey
+
+- type: marking
+  id: UndershirtShirtSkull
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_skull
+
+- type: marking
+  id: UndershirtShirtSS14
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_ss14
+
+- type: marking
+  id: UndershirtShirtStripes
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_stripes
+
+- type: marking
+  id: UndershirtShirtTiedye
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_tiedye
+
+- type: marking
+  id: UndershirtShirtWhite
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: shirt_white
+
+- type: marking
+  id: UndershirtBraSports
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  sexRestriction: Female
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: sports_bra
+
+- type: marking
+  id: UndershirtBraSportsAlt
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  sexRestriction: Female
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: sports_bra_alt
+
+- type: marking
+  id: UndershirtTankFire
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: tank_fire
+
+- type: marking
+  id: UndershirtTankMidriff
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  sexRestriction: Female
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: tank_midriff
+
+- type: marking
+  id: UndershirtTankStripes
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: tank_stripes
+
+- type: marking
+  id: UndershirtShirtUK
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: uk
+
+- type: marking
+  id: UndershirtPoloWhite
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: whitepolo
+
+- type: marking
+  id: UndershirtShortSleeveWhite
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: whiteshortsleeve
+
+- type: marking
+  id: UndershirtTopWhite
+  bodyPart: UndergarmentTop
+  markingCategory: UndergarmentTop
+  speciesRestriction: [Human, SlimePerson, Dwarf, Reptilian, Moth, Arachnid, Akula, Felinid, HumanoidKidanes, Vulpkanines, Android, Murine]
+  sexRestriction: Female
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+    - sprite: _WL/Clothing/Under/undershirts.rsi
+      state: whitetop

@@ -1,0 +1,10 @@
+- type: entity
+  parent: CratePlastic
+  id: CrateVendingMachineRestockCorpFilled
+  name: Corp-O-Mat restock crate
+  description: Contains a restock box for the Corp-O-Mat.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: VendingMachineRestockCorp

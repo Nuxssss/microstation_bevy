@@ -1,0 +1,25 @@
+- type: soundCollection
+  id: CatPurr # Это пойдёт и бестидам, и таярам
+  files:
+    - /Audio/_WL/Voice/Cat/catmur.ogg
+    - /Audio/_WL/Voice/Cat/catmur2.ogg
+    - /Audio/_WL/Voice/Cat/catmur3.ogg
+
+- type: soundCollection
+  id: GolemLaugh
+  files:
+    - /Audio/_WL/Voice/Golem/rustle_1.ogg
+    - /Audio/_WL/Voice/Golem/rustle_2.ogg
+    - /Audio/_WL/Voice/Golem/rustle_3.ogg
+
+- type: soundCollection
+  id: GolemClap
+  files:
+    - /Audio/_WL/Voice/Golem/clap_1.ogg
+
+- type: soundCollection
+  id: Bark
+  files:
+    - /Audio/_WL/Voice/Vulpkanin/dog_bark1.ogg
+    - /Audio/_WL/Voice/Vulpkanin/dog_bark2.ogg
+    - /Audio/_WL/Voice/Vulpkanin/dog_bark3.ogg

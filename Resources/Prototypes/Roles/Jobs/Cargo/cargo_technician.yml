@@ -1,0 +1,54 @@
+- type: job
+  id: CargoTechnician
+  name: job-name-cargotech
+  description: job-description-cargotech
+  playTimeTracker: JobCargoTechnician
+  startingGear: CargoTechGear
+  subnames:
+  - Male: работник склада
+  - Male: курьер
+  - Male: почтальон
+  - Male: логист
+  - Male: старший логист
+  icon: "JobIconCargoTechnician"
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Maintenance
+  extendedAccess:
+  - Salvage
+  #WL-changes-start
+  requirements:
+    - !type:AgeRequirement
+      age: 0 # WL-Changes-AgeRequirement
+  #WL-changes-end
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: BoxingDay
+    prototype: BoxCardboard
+  # WL-Skills-start
+  bonusSkillPoints: 22
+  defaultSkills:
+    Bureaucracy: 2
+    Piloting: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: CargoTechGear
+  equipment:
+    ears: ClothingHeadsetCargo
+    pocket1: AppraisalTool
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: CargoTechnicianChameleonOutfit
+  job: CargoTechnician
+  equipment:
+    head: ClothingHeadHatCargosoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    outerClothing: ClothingOuterWinterCargo
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesFingerless

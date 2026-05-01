@@ -1,0 +1,76 @@
+{
+	"version": 1,
+	"license": "CC-BY-SA-3.0",
+  "copyright": "Taken from /tg/station at https://github.com/tgstation/tgstation/commit/2600f23ebb58499ffd6f843173987f220d9da9ac",
+	"size": {
+		"x": 32,
+		"y": 32
+	},
+	"states": [
+		{
+			"name": "shiv"
+		},
+		{
+			"name": "scalpel"
+		},
+		{
+			"name": "advanced"
+		},
+		{
+			"name": "laser"
+		},
+		{
+			"name": "shiv-inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "shiv-inhand-right",
+			"directions": 4
+		},
+		{
+			"name": "inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "inhand-right",
+			"directions": 4
+		},
+		{
+			"name": "advanced-inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "advanced-inhand-right",
+			"directions": 4
+		},
+		{
+			"name": "laser-inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "laser-inhand-right",
+			"directions": 4
+		},
+		{
+			"name": "0",
+			"delays": [
+				[
+					0.1,
+					0.1
+				]
+			]
+		},
+		{
+			"name": "25"
+		},
+		{
+			"name": "50"
+		},
+		{
+			"name": "75"
+		},
+		{
+			"name": "100"
+		}
+	]
+}

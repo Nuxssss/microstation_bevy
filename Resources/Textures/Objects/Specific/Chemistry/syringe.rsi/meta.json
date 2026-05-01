@@ -1,0 +1,164 @@
+{
+	"version": 1,
+	"license": "CC-BY-SA-3.0",
+	"copyright": "Taken from /tg/station at https://github.com/tgstation/tgstation/commit/ed9e0a911ec939db2ffcbc5fd7b886a0f7dfffab, cryo syringe sprites by Ubaser",
+	"size": {
+		"x": 32,
+		"y": 32
+	},
+	"states": [
+		{
+			"name": "bluespace_base0",
+			"delays": [
+			  [
+				0.1,
+				0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+			  ]
+			]
+		},
+        {
+			"name": "bluespace_base1",
+			"delays": [
+			  [
+				0.1,
+				0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+			  ]
+			]
+		},
+        {
+			"name": "bluespace_base2",
+			"delays": [
+			  [
+				0.1,
+				0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+			  ]
+			]
+		},
+        {
+			"name": "bluespace_base3",
+			"delays": [
+			  [
+				0.1,
+				0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+			  ]
+			]
+		},
+        {
+			"name": "bluespace_base4",
+			"delays": [
+			  [
+				0.1,
+				0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+			  ]
+			]
+		},
+		{
+			"name": "cryo_base0",
+			"delays": [
+			  [
+				0.1,
+				0.1,
+				0.1,
+				0.1,
+				0.1,
+				0.1,
+				0.1
+			  ]
+			]
+		},
+		{
+			"name": "syringe_base0"
+		},
+		{
+			"name": "syringe_base1"
+		},
+		{
+			"name": "syringe_base2"
+		},
+		{
+			"name": "syringe_base3"
+		},
+		{
+			"name": "syringe_base4"
+		},
+		{
+			"name": "broken"
+		},
+		{
+			"name": "syringeproj"
+		},
+		{
+			"name": "syringe1"
+		},
+		{
+			"name": "syringe2"
+		},
+        {
+			"name": "syringe3"
+		},
+        {
+			"name": "syringe4"
+		},
+		{
+			"name": "minisyringe1"
+		},
+		{
+			"name": "minisyringe2"
+		},
+		{
+			"name": "minisyringe3"
+		},
+		{
+		  "name": "inhand-left",
+		  "directions": 4
+		},
+		{
+		  "name": "inhand-right",
+		  "directions": 4
+		},
+		{
+			"name": "inhand-left-fill-1",
+			"directions": 4
+		},
+		{
+			"name": "inhand-right-fill-1",
+			"directions": 4
+		},
+		{
+			"name": "inhand-left-fill-2",
+			"directions": 4
+		},
+		{
+			"name": "inhand-right-fill-2",
+			"directions": 4
+		},
+		{
+			"name": "inhand-left-fill-3",
+			"directions": 4
+		},
+		{
+			"name": "inhand-right-fill-3",
+			"directions": 4
+		}
+	]
+}

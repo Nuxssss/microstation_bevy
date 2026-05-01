@@ -1,0 +1,57 @@
+- type: job
+  id: SalvageSpecialist
+  name: job-name-salvagespec
+  description: job-description-salvagespec
+  playTimeTracker: JobSalvageSpecialist
+  subnames:
+  - Male: шахтёр
+  - Male: полевой исследователь
+  - Male: пилот экспедиции
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 3h
+#    - !type:OverallPlaytimeRequirement
+#      time: 36000 #10 hrs
+    - !type:AgeRequirement
+      age: 0 # WL-Changes-AgeRequirement
+  icon: "JobIconShaftMiner"
+  startingGear: SalvageSpecialistGear
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Salvage
+  - Maintenance
+  - External
+  # WL-Skills-start
+  bonusSkillPoints: 14
+  defaultSkills:
+    Eva: 3
+    Piloting: 2
+    Construction: 2
+    Medicine: 2
+    Science: 2
+    Combat: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: SalvageSpecialistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    id: SalvagePDA
+    ears: ClothingHeadsetCargo
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: SalvageSpecialistChameleonOutfit
+  job: SalvageSpecialist
+  equipment:
+    head: ClothingHeadHatCargosoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: ClothingOuterWinterMiner
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesColorBlack
+

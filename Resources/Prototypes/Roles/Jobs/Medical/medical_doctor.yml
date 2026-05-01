@@ -1,0 +1,56 @@
+- type: job
+  id: MedicalDoctor
+  name: job-name-doctor
+  description: job-description-doctor
+  playTimeTracker: JobMedicalDoctor
+  subnames:
+  - Male: хирург
+  - Male: вирусолог
+  - Male: генетик
+  - Male: патологоанатом
+  - Male: терапевт
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 2h #2 hrs # Corvax-RoleTime
+    - !type:AgeRequirement
+      age: 6 # WL-Changes-AgeRequirement
+  startingGear: DoctorGear
+  icon: "JobIconMedicalDoctor"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: DoctorDay
+    prototype: WehMedipen
+  # WL-Skills-start
+  bonusSkillPoints: 10
+  defaultSkills:
+    Bureaucracy: 2
+    Anatomy: 3
+    Medicine: 3
+  # WL-Skills-end
+
+- type: startingGear
+  id: DoctorGear
+  equipment:
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: MedicalDoctorChameleonOutfit
+  job: MedicalDoctor
+  equipment:
+    head: ClothingHeadNurseHat
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex

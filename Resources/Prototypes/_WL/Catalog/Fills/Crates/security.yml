@@ -1,0 +1,21 @@
+- type: entity
+  id: CrateSecurityDSS
+  parent: CrateSecgear
+  name: box of heavy equipment
+  description: One set of Heavy Security Department equipment, capable of protecting against almost anything.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingUniformJumpsuitDSS
+      - id: ClothingOuterVestHeavyDSS
+      - id: ClothingHeadHelmetHeavyDSS
+      - id: ClothingHeadsetTacticDSS
+      - id: ClothingMaskGasSwat
+      - id: ClothingShoesBootsJackSecFilled
+      - id: ClothingEyesGlassesSecurity
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingBackpackSecurity
+      - id: ClothingBeltSecurityWebbing
+      - id: FlashlightSeclite
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled

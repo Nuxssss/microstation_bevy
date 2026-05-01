@@ -1,0 +1,103 @@
+- type: latheRecipePack
+  id: ManualStorageStatic
+  recipes:
+  # Default
+  - ManualStorageDefaultSmallRecipe
+  - ManualStorageDefaultBoxRecipe
+  - ManualStorageDefaultBigRecipe
+  # Cargo
+  - ManualStorageCargoSmallRecipe
+  - ManualStorageCargoBoxRecipe
+  - ManualStorageCargoBigRecipe
+  # Engineer
+  - ManualStorageEngineerSmallRecipe
+  - ManualStorageEngineerBoxRecipe
+  - ManualStorageEngineerBigRecipe
+  # Medical
+  - ManualStorageMedicalSmallRecipe
+  - ManualStorageMedicalBoxRecipe
+  - ManualStorageMedicalBigRecipe
+  # Security
+  - ManualStorageSecuritySmallRecipe
+  - ManualStorageSecurityBoxRecipe
+  - ManualStorageSecurityBigRecipe
+  # Science
+  - ManualStorageScienceSmallRecipe
+  - ManualStorageScienceBoxRecipe
+  - ManualStorageScienceBigRecipe
+  # Command
+  - ManualStorageCommandSmallRecipe
+  - ManualStorageCommandBoxRecipe
+  - ManualStorageCommandBigRecipe
+
+#Medical
+- type: latheRecipePack
+  id: ManualStorageMedicalStatic
+  recipes:
+  - ManualStorageMedicalSmallRecipe
+  - ManualStorageMedicalBoxRecipe
+  - ManualStorageMedicalBigRecipe
+
+#Security
+- type: latheRecipePack
+  id: ManualStorageSecurityStatic
+  recipes:
+  - ManualStorageSecuritySmallRecipe
+  - ManualStorageSecurityBoxRecipe
+  - ManualStorageSecurityBigRecipe
+
+#Command
+- type: latheRecipePack
+  id: ManualStorageCommandStatic
+  recipes:
+  - ManualStorageCommandSmallRecipe
+  - ManualStorageCommandBoxRecipe
+  - ManualStorageCommandBigRecipe
+
+#Default
+# - type: latheRecipePack
+#   id: ManualStorageDefaultStatic
+#   recipes:
+#   - ManualStorageDefaultSmallRecipe
+#   - ManualStorageDefaultBoxRecipe
+#   - ManualStorageDefaultBigRecipe
+
+#Cargo
+# - type: latheRecipePack
+#   id: ManualStorageCargoStatic
+#   recipes:
+#   - ManualStorageCargoSmallRecipe
+#   - ManualStorageCargoBoxRecipe
+#   - ManualStorageCargoBigRecipe
+
+#Engineer
+# - type: latheRecipePack
+#   id: ManualStorageEngineerStatic
+#   recipes:
+#   - ManualStorageEngineerSmallRecipe
+#   - ManualStorageEngineerBoxRecipe
+#   - ManualStorageEngineerBigRecipe
+
+#Science
+# - type: latheRecipePack
+#   id: ManualStorageScienceStatic
+#   recipes:
+#   - ManualStorageScienceSmallRecipe
+#   - ManualStorageScienceBoxRecipe
+#   - ManualStorageScienceBigRecipe
+
+- type: latheRecipePack
+  id: Photo
+  recipes:
+  - PhotoCameraRecipe
+
+- type: latheRecipePack
+  id: SecBalaclavStatic
+  recipes:
+  - SecBalaclavBlackRecipe
+  - SecBalaclavBlackSkullRecipe
+  - SecBalaclavBlueRecipe
+  - SecBalaclavBlueSkullRecipe
+  - SecBalaclavGreenRecipe
+  - SecBalaclavRedRecipe
+  - SecBalaclavTanRecipe

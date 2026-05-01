@@ -1,0 +1,9 @@
+- type: entity
+  id: TurretExitStateAction
+  name: Stop managing
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon: Interface/eject.png
+  - type: InstantAction
+    event: !type:TurretExitRidingActionEvent

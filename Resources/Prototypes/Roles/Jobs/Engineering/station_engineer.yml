@@ -1,0 +1,58 @@
+- type: job
+  id: StationEngineer
+  name: job-name-engineer
+  description: job-description-engineer
+  playTimeTracker: JobStationEngineer
+  subnames:
+  - Male: электрик
+  - Male: механик
+  - Male: управленец ГЭУ
+  - Male: системный администратор
+  - Male: инженер-структурщик
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 5h # Corvax-RoleTime
+    - !type:AgeRequirement
+      age: 4 # WL-Changes-AgeRequirement
+  startingGear: StationEngineerGear
+  icon: "JobIconStationEngineer"
+  supervisors: job-supervisors-ce
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  extendedAccess:
+  - Atmospherics
+  # WL-Skills-start
+  bonusSkillPoints: 8
+  defaultSkills:
+    Eva: 3
+    IT: 2
+    Atmospherics: 2
+    Construction: 3
+    Electrical: 3
+    Generators: 3
+    ComplexDevices: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: StationEngineerGear
+  equipment:
+    eyes: ClothingEyesGlassesMeson
+    belt: ClothingBeltUtilityEngineering
+    ears: ClothingHeadsetEngineering
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: StationEngineerChameleonOutfit
+  job: StationEngineer
+  equipment:
+    head: ClothingHeadHatHardhatYellow
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedOrange
+    outerClothing: ClothingOuterWinterEngi
+    gloves: ClothingHandsGlovesColorYellow
+    shoes: ClothingShoesBootsMag

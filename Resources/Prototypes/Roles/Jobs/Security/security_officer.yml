@@ -1,0 +1,63 @@
+- type: job
+  id: SecurityOfficer
+  name: job-name-security
+  description: job-description-security
+  playTimeTracker: JobSecurityOfficer
+  subnames:
+  - Male: офицер охраны
+  - Male: офицер-оперативник
+  - Male: патрульный офицер
+  - Male: специалист по безопасности
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10h # Corvax-RoleTime
+    - !type:AgeRequirement
+      age: 4 # WL-Changes-AgeRequirement
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  startingGear: SecurityOfficerGear
+  icon: "JobIconSecurityOfficer"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - External
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  # WL-Skills-start
+  bonusSkillPoints: 12
+  defaultSkills:
+    Bureaucracy: 2
+    Eva: 3
+    Forensics: 2
+    Combat: 2
+    Weapons: 3
+  # WL-Skills-end
+
+- type: startingGear
+  id: SecurityOfficerGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+
+- type: chameleonOutfit
+  id: SecurityOfficerChameleonOutfit
+  job: SecurityOfficer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar
+    gloves: ClothingHandsGlovesColorBlack

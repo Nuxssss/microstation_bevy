@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseGuidebook
+  id: BookAME
+  name: antimatter engine manual
+  description: The book looks inexpensive and boring. The pages were yellowed, and the cheap paper was lost. The spine is slightly torn. The cover says "manual on the Antimatter Engine", the letters "A", "M" and "E" are printed in uppercase and bolder than the rest in the title. The working core of the DAM is schematically shown below. The year of release, publisher, and editors are indicated in small print. Nakamura engineering and NanoTrasen seals can be found on the back cover.
+  components:
+  - type: Sprite
+    sprite: _WL/Entities/Objects/Misc/books.rsi
+    layers:
+      - state: ame
+  - type: GuideHelp
+    guides:
+    - AME

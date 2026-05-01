@@ -1,0 +1,76 @@
+- type: job
+  id: Captain
+  name: job-name-captain
+  description: job-description-captain
+  playTimeTracker: JobCaptain
+  subnames:
+  - Male: директор НИК
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 20h # Corvax-RoleTime 4
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 20h # Corvax-RoleTime 4
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 4h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 20h # Corvax-RoleTime 4
+#    - !type:DepartmentTimeRequirement
+#      department: Command
+#      time: 4h
+    - !type:OverallPlaytimeRequirement
+      time: 140h #140 hrs # Corvax-RoleTime
+    - !type:AgeRequirement
+      age: 12 # WL-Changes-AgeRequirement
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 20
+  startingGear: CaptainGear
+  icon: "JobIconCaptain"
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  # WL-Skills-start
+  bonusSkillPoints: 14
+  defaultSkills:
+    Bureaucracy: 3
+    Eva: 3
+    Piloting: 3
+    Weapons: 2
+  # WL-Skills-end
+
+- type: startingGear
+  id: CaptainGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesCaptain
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand
+  storage:
+    back:
+    - Flash
+    # - StationCharter
+
+- type: chameleonOutfit
+  id: CaptainChameleonOutfit
+  job: Captain
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatCapcap
+    eyes: ClothingEyesGlassesCommand
+    mask: ClothingMaskGasCaptain
+    neck: ClothingNeckCloakCap
