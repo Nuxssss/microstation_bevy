@@ -109,7 +109,11 @@ fn poll_console(
     }
 }
 
-fn handle_command(line: &str, commands: &mut Commands, prototypes: &PrototypeManager) -> String {
+fn handle_command(
+    line: &str,
+    commands: &mut Commands,
+    prototypes: &PrototypeManager,
+) -> String {
     let args = match shlex::split(line) {
         Some(a) if !a.is_empty() => a,
         _ => return "error: invalid input".to_string(),
@@ -117,7 +121,7 @@ fn handle_command(line: &str, commands: &mut Commands, prototypes: &PrototypeMan
 
     match args.as_slice() {
         [cmd] if cmd == "help" => {
-            "commands: spawn <id> [x] [y] | help".to_string()
+            "commands: spawn <id> [x] [y] | entities | entity <id> | clear | help".to_string()
         }
         [cmd, id] if cmd == "spawn" => {
             match prototypes.spawn_entity(id, None, commands) {
@@ -133,6 +137,16 @@ fn handle_command(line: &str, commands: &mut Commands, prototypes: &PrototypeMan
                 Some(entity) => format!("spawned {id} -> {entity:?}"),
                 None => format!("error: unknown prototype '{id}'"),
             }
+        }
+        [cmd, ..] if cmd == "entities" => {
+            let mut output = "=== All Entities ===\n\n".to_string();
+            output.push_str("Note: Full entity listing requires world access.\n");
+            output.push_str("Use 'entity <id>' to query specific entities.\n");
+            output
+        }
+        [cmd, entity_id] if cmd == "entity" => {
+            let _eid = entity_id.parse::<u64>().unwrap_or(0);
+            format!("error: entity info requires world access: {}", entity_id)
         }
         [cmd, ..] => {
             format!("error: unknown command '{cmd}'")

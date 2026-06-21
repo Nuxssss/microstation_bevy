@@ -34,7 +34,7 @@ fn spawn_player(
 
 fn handle_player_input(
     trigger: On<FromClient<PlayerInput>>,
-    time: Res<Time>,
+    _time: Res<Time>,
     mut player_positions: Query<&mut Position>
 ) {
     let ClientId::Client(e) = trigger.client_id else {return};
