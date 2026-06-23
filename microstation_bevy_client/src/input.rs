@@ -19,10 +19,6 @@ fn send_input(keys: Res<ButtonInput<KeyCode>>, mut commands: Commands) {
     direction.x -= keys.pressed(KeyCode::ArrowLeft) as i32;
 
     if direction != IVec2::ZERO {
-        commands.client_trigger(
-            PlayerInput {
-                direction,
-            }
-        );
+        commands.client_trigger(PlayerInput { direction });
     }
 }

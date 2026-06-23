@@ -3,8 +3,8 @@ use std::time::SystemTime;
 
 use bevy::prelude::*;
 use bevy_replicon::RepliconPlugins;
-use bevy_replicon_renet::{RenetClient, RepliconRenetPlugins};
 use bevy_replicon_renet::netcode::{ClientAuthentication, NetcodeClientTransport};
+use bevy_replicon_renet::{RenetClient, RepliconRenetPlugins};
 
 use microstation_bevy_shared::protocol::{PROTOCOL_ID, SERVER_ADDR, SERVER_PORT};
 

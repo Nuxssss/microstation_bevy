@@ -1,7 +1,9 @@
 use bevy::color::Color;
 use serde::{Deserialize, Deserializer};
 
-pub(crate) fn deserialize_color<'de, D: Deserializer<'de>>(d: D) -> Result<Option<Color>, D::Error> {
+pub(crate) fn deserialize_color<'de, D: Deserializer<'de>>(
+    d: D,
+) -> Result<Option<Color>, D::Error> {
     let s = Option::<String>::deserialize(d)?;
     let Some(s) = s else { return Ok(None) };
 
@@ -41,7 +43,11 @@ pub(crate) fn deserialize_color<'de, D: Deserializer<'de>>(d: D) -> Result<Optio
     let r = parse(0)? as f32 / 255.0;
     let g = parse(2)? as f32 / 255.0;
     let b = parse(4)? as f32 / 255.0;
-    let a = if s.len() == 8 { parse(6)? as f32 / 255.0 } else { 1.0 };
+    let a = if s.len() == 8 {
+        parse(6)? as f32 / 255.0
+    } else {
+        1.0
+    };
 
     Ok(Some(Color::srgba(r, g, b, a)))
 }

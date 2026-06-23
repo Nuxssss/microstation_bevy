@@ -5,5 +5,5 @@ use serde::{Deserialize, Serialize};
 /// Добавляй новые поля по мере роста — структура позволяет расширять без боли.
 #[derive(Event, Serialize, Deserialize, Clone, Debug, Default)]
 pub struct PlayerInput {
-    pub direction: IVec2
+    pub direction: IVec2,
 }

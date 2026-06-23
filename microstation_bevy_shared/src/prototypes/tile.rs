@@ -1,6 +1,6 @@
-use serde_inline_default::serde_inline_default;
 use bevy::prelude::*;
 use serde::Deserialize;
+use serde_inline_default::serde_inline_default;
 
 // В конец файла, после YamlComponent
 #[serde_inline_default]
@@ -28,7 +28,6 @@ pub struct TilePrototype {
     // ✅ Рендер вариантов
     #[serde_inline_default(1u8)]
     pub variants: u8,
-
     // TODO
 
     // #[serde(default)]

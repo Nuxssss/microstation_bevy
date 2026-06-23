@@ -1,9 +1,9 @@
-use bevy::prelude::Component;
+use bevy::prelude::{Component, Reflect};
 use serde::{Deserialize, Serialize};
 use serde_inline_default::serde_inline_default;
 
 #[serde_inline_default]
-#[derive(Deserialize, Serialize, Component, Default, Clone, Debug)]
+#[derive(Deserialize, Serialize, Component, Reflect, Default, Clone, Debug)]
 pub struct IconSmooth {
     #[serde_inline_default(true)]
     pub enabled: bool,
@@ -17,14 +17,14 @@ pub struct IconSmooth {
     #[serde(default)]
     pub mode: IconSmoothingMode,
     #[serde(skip)]
-    pub update_generation: i32
+    pub update_generation: i32,
 }
 
-#[derive(Deserialize, Serialize, Clone, Default, Debug)]
+#[derive(Deserialize, Serialize, Clone, Default, Debug, Reflect)]
 pub enum IconSmoothingMode {
     #[default]
     Corners,
     CardinalFlags,
     Diagonal,
-    NoSprite
+    NoSprite,
 }

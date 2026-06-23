@@ -1,4 +1,3 @@
-
 use bevy::prelude::Component;
 use serde::{Deserialize, Serialize};
 use serde_inline_default::serde_inline_default;

@@ -26,7 +26,9 @@ pub struct RsiStateMeta {
     pub delays: Vec<Vec<f32>>,
 }
 
-fn default_dirs() -> u8 { 1 }
+fn default_dirs() -> u8 {
+    1
+}
 
 #[derive(Debug, Clone)]
 pub struct RsiStateHandles {
@@ -47,7 +49,11 @@ impl RsiRegistry {
         fs_base.push(assets_base);
         fs_base.push("Textures");
         info!("[RSI] FS root: {:?}", fs_base);
-        Self { fs_base, metas: HashMap::new(), cache: HashMap::new() }
+        Self {
+            fs_base,
+            metas: HashMap::new(),
+            cache: HashMap::new(),
+        }
     }
 
     pub fn get_first_state(&mut self, rsi_id: &str) -> Option<String> {
@@ -55,10 +61,11 @@ impl RsiRegistry {
             let path = self.fs_base.join(rsi_id).join("meta.json");
             match fs::read_to_string(&path) {
                 Ok(d) => serde_json::from_str(&d).ok(),
-                Err(_) => None
+                Err(_) => None,
             }
         });
-        meta.as_ref().and_then(|m| m.states.first().map(|s| s.name.clone()))
+        meta.as_ref()
+            .and_then(|m| m.states.first().map(|s| s.name.clone()))
     }
 
     pub fn get_handles(
@@ -76,11 +83,16 @@ impl RsiRegistry {
             let path = self.fs_base.join(rsi_id).join("meta.json");
             match fs::read_to_string(&path) {
                 Ok(d) => serde_json::from_str(&d).ok(),
-                Err(e) => { error!("[RSI] meta.json IO: {} | {}", path.display(), e); None }
+                Err(e) => {
+                    error!("[RSI] meta.json IO: {} | {}", path.display(), e);
+                    None
+                }
             }
         });
 
-        let Some(meta) = meta else { return None; };
+        let Some(meta) = meta else {
+            return None;
+        };
         let Some(st) = meta.states.iter().find(|s| s.name == state) else {
             error!("[RSI] meta.json missing or state '{}' not found", state);
             return None;
@@ -94,8 +106,14 @@ impl RsiRegistry {
         let img_path = format!("Textures/{}/{}.png", rsi_id, st.name);
         let img_h = server.load(&img_path);
 
-        let handles = RsiStateHandles { image: img_h, layout };
-        self.cache.entry(rsi_id.to_string()).or_default().insert(state.to_string(), handles.clone());
+        let handles = RsiStateHandles {
+            image: img_h,
+            layout,
+        };
+        self.cache
+            .entry(rsi_id.to_string())
+            .or_default()
+            .insert(state.to_string(), handles.clone());
         Some(handles)
     }
 }
@@ -114,9 +132,19 @@ impl Plugin for RsiPlugin {
     }
 }
 
-fn init_error_sprite(mut commands: Commands, mut layouts: ResMut<Assets<TextureAtlasLayout>>, server: Res<AssetServer>) {
+fn init_error_sprite(
+    mut commands: Commands,
+    mut layouts: ResMut<Assets<TextureAtlasLayout>>,
+    server: Res<AssetServer>,
+) {
     let img = server.load("Textures/error.rsi/error.png");
-    let layout = layouts.add(TextureAtlasLayout::from_grid(UVec2::new(32, 32), 1, 1, None, None));
+    let layout = layouts.add(TextureAtlasLayout::from_grid(
+        UVec2::new(32, 32),
+        1,
+        1,
+        None,
+        None,
+    ));
     commands.insert_resource(ErrorSprite { image: img, layout });
     info!("[RSI] Error sprite handles initialized");
 }

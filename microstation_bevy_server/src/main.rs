@@ -1,15 +1,15 @@
-mod plugin;
-mod network;
-mod game;
 mod console;
+mod game;
+mod network;
+mod plugin;
 
+use crate::network::NetworkServerPlugin;
 use bevy::ecs;
 use bevy::log::{Level, LogPlugin};
 use bevy::prelude::*;
 use bevy::state::app::StatesPlugin;
 use microstation_bevy_shared::plugin::SharedPlugin;
 use plugin::ServerPlugin;
-use crate::network::NetworkServerPlugin;
 
 fn main() -> AppExit {
     App::new()

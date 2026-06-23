@@ -10,12 +10,21 @@ pub fn load_prototypes(mut manager: ResMut<PrototypeManager>) {
     let mut success = 0;
     let mut failed = 0;
 
-    for entry in WalkDir::new("Resources/Prototypes").into_iter().filter_map(|e| e.ok()) {
+    for entry in WalkDir::new("Resources/Prototypes")
+        .into_iter()
+        .filter_map(|e| e.ok())
+    {
         let path = entry.path();
-        if path.extension().map(|e| e == "yaml" || e == "yml") != Some(true) { continue; }
+        if path.extension().map(|e| e == "yaml" || e == "yml") != Some(true) {
+            continue;
+        }
         let content = match fs::read_to_string(path) {
             Ok(c) => c,
-            Err(e) => { warn!("Read error {:?}: {}", path, e); failed += 1; continue; }
+            Err(e) => {
+                warn!("Read error {:?}: {}", path, e);
+                failed += 1;
+                continue;
+            }
         };
 
         let options = serde_saphyr::options! { strict_booleans: true };
@@ -30,7 +39,10 @@ pub fn load_prototypes(mut manager: ResMut<PrototypeManager>) {
                 }
                 success += 1;
             }
-            Err(e) => { warn!("Parse error {:?}: {}", path, e); failed += 1; }
+            Err(e) => {
+                warn!("Parse error {:?}: {}", path, e);
+                failed += 1;
+            }
         }
     }
 
@@ -42,7 +54,9 @@ pub fn load_prototypes(mut manager: ResMut<PrototypeManager>) {
     for id in raw_protos.keys().cloned().collect::<Vec<_>>() {
         match resolve_and_merge(&id, &raw_protos, &mut visiting) {
             Ok(merged) => match serde_json::from_value::<EntityPrototype>(merged) {
-                Ok(proto) => { resolved_cache.insert(id, proto); }
+                Ok(proto) => {
+                    resolved_cache.insert(id, proto);
+                }
                 Err(e) => error!("Deserialization failed for '{}': {}", id, e),
             },
             Err(e) => error!("Resolution failed for '{}': {}", id, e),
@@ -57,10 +71,14 @@ fn resolve_and_merge(
     raw: &HashMap<String, Value>,
     visiting: &mut HashMap<String, bool>,
 ) -> Result<Value, String> {
-    if visiting.contains_key(id) { return Err("Circular inheritance detected".into()); }
+    if visiting.contains_key(id) {
+        return Err("Circular inheritance detected".into());
+    }
     visiting.insert(id.to_string(), true);
 
-    let base = raw.get(id).ok_or_else(|| format!("Missing prototype '{}'", id))?;
+    let base = raw
+        .get(id)
+        .ok_or_else(|| format!("Missing prototype '{}'", id))?;
     let merged = if let Value::Object(map) = base {
         if let Some(Value::String(parent_id)) = map.get("parent") {
             let parent_val = resolve_and_merge(parent_id, raw, visiting)?;

@@ -1,10 +1,10 @@
-pub mod plugin;
-pub mod components;
-pub mod events;
-pub mod protocol;
-pub mod world;
-pub mod prototypes;
-mod helpers;
-mod draw_depth;
 mod color;
+pub mod components;
+mod draw_depth;
+pub mod events;
+mod helpers;
+pub mod plugin;
+pub mod protocol;
+pub mod prototypes;
 mod tile;
+pub mod world;

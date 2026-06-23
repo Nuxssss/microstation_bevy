@@ -5,4 +5,3 @@ use serde::{Deserialize, Serialize};
 pub struct Player {
     pub client_id: u64,
 }
-

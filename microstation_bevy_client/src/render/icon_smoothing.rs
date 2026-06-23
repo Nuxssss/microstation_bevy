@@ -115,14 +115,16 @@ fn queue_dirty_entities(
     }
 }
 
-fn dirty_neighbors(
-    pos: IVec2,
-    index: &SmoothSpatialIndex,
-    queue: &mut SmoothQueue,
-) {
+fn dirty_neighbors(pos: IVec2, index: &SmoothSpatialIndex, queue: &mut SmoothQueue) {
     const OFFSETS: [IVec2; 8] = [
-        IVec2::X, IVec2::NEG_X, IVec2::Y, IVec2::NEG_Y,
-        IVec2::new(1, 1), IVec2::new(1, -1), IVec2::new(-1, 1), IVec2::new(-1, -1),
+        IVec2::X,
+        IVec2::NEG_X,
+        IVec2::Y,
+        IVec2::NEG_Y,
+        IVec2::new(1, 1),
+        IVec2::new(1, -1),
+        IVec2::new(-1, 1),
+        IVec2::new(-1, -1),
     ];
     for offset in OFFSETS {
         if let Some(entities) = index.index.get(&(pos + offset)) {
@@ -149,23 +151,41 @@ pub fn process_smooth_queue(
         if queue.processed.get(&entity) == Some(&r#gen) {
             continue;
         }
-        let Ok((pos, smooth)) = smooth_data.get(entity) else { continue; };
-        if !smooth.enabled { continue; }
+        let Ok((pos, smooth)) = smooth_data.get(entity) else {
+            continue;
+        };
+        if !smooth.enabled {
+            continue;
+        }
         queue.processed.insert(entity, r#gen);
-        let Ok(mut sprite) = sprites.get_mut(entity) else { continue; };
+        let Ok(mut sprite) = sprites.get_mut(entity) else {
+            continue;
+        };
         match smooth.mode {
-            IconSmoothingMode::Corners => calculate_corners(smooth, pos.0, &mut sprite, &smooth_data, &index),
-            IconSmoothingMode::CardinalFlags => calculate_cardinal(smooth, pos.0, &mut sprite, &smooth_data, &index),
-            IconSmoothingMode::Diagonal => calculate_diagonal(smooth, pos.0, &mut sprite, &smooth_data, &index),
+            IconSmoothingMode::Corners => {
+                calculate_corners(smooth, pos.0, &mut sprite, &smooth_data, &index)
+            }
+            IconSmoothingMode::CardinalFlags => {
+                calculate_cardinal(smooth, pos.0, &mut sprite, &smooth_data, &index)
+            }
+            IconSmoothingMode::Diagonal => {
+                calculate_diagonal(smooth, pos.0, &mut sprite, &smooth_data, &index)
+            }
             IconSmoothingMode::NoSprite => {}
         }
     }
 }
 
 fn is_compatible(a: &IconSmooth, b: &IconSmooth) -> bool {
-    if !b.enabled { return false; }
-    let Some(ref key_a) = a.smooth_key else { return false; };
-    let Some(ref key_b) = b.smooth_key else { return false; };
+    if !b.enabled {
+        return false;
+    }
+    let Some(ref key_a) = a.smooth_key else {
+        return false;
+    };
+    let Some(ref key_b) = b.smooth_key else {
+        return false;
+    };
     key_a == key_b || a.additional_keys.contains(key_b)
 }
 
@@ -175,9 +195,13 @@ fn has_matching_neighbor(
     smooth_data: &Query<(&Position, &IconSmooth)>,
     index: &SmoothSpatialIndex,
 ) -> bool {
-    let Some(entities) = index.index.get(&pos) else { return false; };
+    let Some(entities) = index.index.get(&pos) else {
+        return false;
+    };
     for &entity in entities {
-        let Ok((_, neighbor_smooth)) = smooth_data.get(entity) else { continue; };
+        let Ok((_, neighbor_smooth)) = smooth_data.get(entity) else {
+            continue;
+        };
         if is_compatible(smooth, neighbor_smooth) {
             return true;
         }
@@ -193,10 +217,18 @@ fn calculate_cardinal(
     index: &SmoothSpatialIndex,
 ) {
     let mut dirs = 0u8;
-    if has_matching_neighbor(pos + IVec2::Y, smooth, smooth_data, index) { dirs |= 1; }
-    if has_matching_neighbor(pos - IVec2::Y, smooth, smooth_data, index) { dirs |= 2; }
-    if has_matching_neighbor(pos + IVec2::X, smooth, smooth_data, index) { dirs |= 4; }
-    if has_matching_neighbor(pos - IVec2::X, smooth, smooth_data, index) { dirs |= 8; }
+    if has_matching_neighbor(pos + IVec2::Y, smooth, smooth_data, index) {
+        dirs |= 1;
+    }
+    if has_matching_neighbor(pos - IVec2::Y, smooth, smooth_data, index) {
+        dirs |= 2;
+    }
+    if has_matching_neighbor(pos + IVec2::X, smooth, smooth_data, index) {
+        dirs |= 4;
+    }
+    if has_matching_neighbor(pos - IVec2::X, smooth, smooth_data, index) {
+        dirs |= 8;
+    }
     sprite.state = Some(format!("{}{}", smooth.state_base, dirs));
 }
 
@@ -210,7 +242,11 @@ fn calculate_diagonal(
     let matching = has_matching_neighbor(pos + IVec2::X, smooth, smooth_data, index)
         && has_matching_neighbor(pos + IVec2::new(1, -1), smooth, smooth_data, index)
         && has_matching_neighbor(pos - IVec2::Y, smooth, smooth_data, index);
-    sprite.state = Some(format!("{}{}", smooth.state_base, if matching { "1" } else { "0" }));
+    sprite.state = Some(format!(
+        "{}{}",
+        smooth.state_base,
+        if matching { "1" } else { "0" }
+    ));
 }
 
 fn calculate_corners(
@@ -230,16 +266,38 @@ fn calculate_corners(
     let sw = has_matching_neighbor(pos + IVec2::new(-1, -1), smooth, smooth_data, index);
 
     let (mut c_ne, mut c_nw, mut c_se, mut c_sw) = (0u8, 0u8, 0u8, 0u8);
-    const CCW: u8 = 1; const DIAG: u8 = 2; const CW: u8 = 4;
+    const CCW: u8 = 1;
+    const DIAG: u8 = 2;
+    const CW: u8 = 4;
 
-    if n { c_ne |= CCW; c_nw |= CW; }
-    if ne { c_ne |= DIAG; }
-    if e { c_ne |= CW; c_se |= CCW; }
-    if se { c_se |= DIAG; }
-    if s { c_se |= CW; c_sw |= CCW; }
-    if sw { c_sw |= DIAG; }
-    if w { c_sw |= CW; c_nw |= CCW; }
-    if nw { c_nw |= DIAG; }
+    if n {
+        c_ne |= CCW;
+        c_nw |= CW;
+    }
+    if ne {
+        c_ne |= DIAG;
+    }
+    if e {
+        c_ne |= CW;
+        c_se |= CCW;
+    }
+    if se {
+        c_se |= DIAG;
+    }
+    if s {
+        c_se |= CW;
+        c_sw |= CCW;
+    }
+    if sw {
+        c_sw |= DIAG;
+    }
+    if w {
+        c_sw |= CW;
+        c_nw |= CCW;
+    }
+    if nw {
+        c_nw |= DIAG;
+    }
 
     sprite.layers = vec![
         create_corner_layer(&smooth.state_base, c_se, DirectionOffset::None),

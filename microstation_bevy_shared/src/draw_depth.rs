@@ -1,11 +1,14 @@
-use bevy::color::Color;
-use bevy::reflect::erased_serde::__private::serde::Deserializer;
-use serde::{Deserialize, Serialize};
-use serde::de::Error;
 use crate::draw_depth::DrawDepth::{LowFloors, Overlays};
+use bevy::color::Color;
+use bevy::prelude::Reflect;
+use bevy::reflect::erased_serde::__private::serde::Deserializer;
+use serde::de::Error;
+use serde::{Deserialize, Serialize};
 
 #[repr(i8)]
-#[derive(Deserialize, Serialize, Debug, Clone, Copy, Default, PartialEq, Eq, PartialOrd, Ord)]
+#[derive(
+    Deserialize, Serialize, Reflect, Debug, Clone, Copy, Default, PartialEq, Eq, PartialOrd, Ord,
+)]
 pub enum DrawDepth {
     LowFloors = -20,
     ThickPipe,
@@ -40,12 +43,14 @@ pub enum DrawDepth {
     Overlays,
 }
 
-pub(crate) fn deserialize_depth_int<'de, D: Deserializer<'de>>(d: D) -> Result<DrawDepth, D::Error> {
+pub(crate) fn deserialize_depth_int<'de, D: Deserializer<'de>>(
+    d: D,
+) -> Result<DrawDepth, D::Error> {
     #[derive(Deserialize)]
     #[serde(untagged)]
     enum EnumOrInt {
         Enum(DrawDepth),
-        Int(i8)
+        Int(i8),
     }
     match EnumOrInt::deserialize(d)? {
         EnumOrInt::Enum(a) => Ok(a),
@@ -53,7 +58,7 @@ pub(crate) fn deserialize_depth_int<'de, D: Deserializer<'de>>(d: D) -> Result<D
             if a < LowFloors as i8 || a > Overlays as i8 {
                 return Err(D::Error::custom("wrong depth"));
             }
-            Ok( unsafe { std::mem::transmute(a) }) // Я хуею что у них там за парсер ямла
+            Ok(unsafe { std::mem::transmute(a) }) // Я хуею что у них там за парсер ямла
         }
     }
 }

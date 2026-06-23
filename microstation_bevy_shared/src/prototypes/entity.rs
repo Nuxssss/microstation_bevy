@@ -1,11 +1,11 @@
-use std::collections::{HashMap, HashSet};
+use crate::components::meta_data::MetaData;
+use crate::helpers::force_string;
+use crate::prototypes::tile::TilePrototype;
 use bevy::prelude::TypePath;
 use serde::Deserialize;
 use serde_inline_default::serde_inline_default;
 use serde_nested_with::serde_nested;
-use crate::components::meta_data::MetaData;
-use crate::helpers::force_string;
-use crate::prototypes::tile::TilePrototype;
+use std::collections::{HashMap, HashSet};
 
 #[derive(TypePath, Debug, Deserialize, Clone)]
 #[serde(tag = "type", rename_all = "camelCase")]
@@ -13,7 +13,7 @@ pub enum Prototype {
     Entity(EntityPrototype),
     Tile(TilePrototype),
     #[serde(other)]
-    Other
+    Other,
 }
 
 #[serde_nested]
@@ -50,15 +50,15 @@ pub struct EntityPrototype {
 #[serde(untagged)]
 pub enum Parent {
     One(String),
-    Many(Vec<String>)
+    Many(Vec<String>),
 }
 
 #[derive(Deserialize, Debug, Clone)]
 #[serde(tag = "type")]
 pub enum YamlComponent {
-    MetaData (MetaData),
+    MetaData(MetaData),
     Transform(crate::components::transform::Transform),
-    Sprite (crate::components::sprite::ComplexSprite),
+    Sprite(crate::components::sprite::ComplexSprite),
     IconSmooth(crate::components::icon_smooth::IconSmooth),
     Item(crate::components::item::Item),
     // Physics {
@@ -70,5 +70,5 @@ pub enum YamlComponent {
     //     //fixtures: HashMap<String, Fixture>,
     // },
     #[serde(other)]
-    Other
+    Other,
 }

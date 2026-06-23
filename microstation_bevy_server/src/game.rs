@@ -1,11 +1,8 @@
 use bevy::prelude::*;
 use bevy_replicon::prelude::*;
 use bevy_replicon::shared::backend::connected_client::NetworkId;
-use microstation_bevy_shared::{
-    components::player::Player,
-    events::PlayerInput,
-};
 use microstation_bevy_shared::world::Position;
+use microstation_bevy_shared::{components::player::Player, events::PlayerInput};
 
 pub struct GamePlugin;
 
@@ -35,9 +32,11 @@ fn spawn_player(
 fn handle_player_input(
     trigger: On<FromClient<PlayerInput>>,
     _time: Res<Time>,
-    mut player_positions: Query<&mut Position>
+    mut player_positions: Query<&mut Position>,
 ) {
-    let ClientId::Client(e) = trigger.client_id else {return};
+    let ClientId::Client(e) = trigger.client_id else {
+        return;
+    };
     let mut pos = player_positions.get_mut(e).unwrap();
     pos.0 += trigger.direction;
 }
