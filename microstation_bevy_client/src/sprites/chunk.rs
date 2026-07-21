@@ -52,7 +52,7 @@ pub fn sync_chunk_sprites(
                 Transform::from_xyz(
                     world_pos.x as f32 * TILE_SIZE,
                     world_pos.y as f32 * TILE_SIZE,
-                    world_pos.y as f32 * -0.001, // порядок по Y
+                    0.,
                 ),
                 Visibility::default(),
             ));

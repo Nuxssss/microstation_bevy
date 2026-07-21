@@ -17,6 +17,7 @@ pub fn sync_player_positions(
     for (Position(pos), mut transform) in players {
         transform.translation.x = pos.x as f32 * 32.;
         transform.translation.y = pos.y as f32 * 32.;
+        transform.translation.z = 1.
     }
 }
 
