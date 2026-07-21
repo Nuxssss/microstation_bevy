@@ -1,0 +1,17 @@
+[package]
+name = "microstation_bevy_server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+microstation_bevy_shared = { path = "../microstation_bevy_shared", feature = ["server"] }
+
+bevy = { workspace = true, features = [
+    "multi_threaded",
+    "debug",
+    "bevy_log"
+] }
+bevy_replicon        = { workspace = true }
+bevy_replicon_renet  = { workspace = true }
+serde                = { workspace = true }
+clap = { workspace = true }

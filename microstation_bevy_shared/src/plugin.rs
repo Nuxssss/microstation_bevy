@@ -1,0 +1,17 @@
+use crate::{
+    actions::ActionPlugin, grid::plugin::GridPlugin, player::PlayerId,
+    prototype::plugin::PrototypePlugin,
+};
+use bevy::prelude::*;
+use bevy_replicon::prelude::*;
+
+pub struct SharedPlugin;
+
+impl Plugin for SharedPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_plugins(PrototypePlugin);
+        app.add_plugins(ActionPlugin);
+        app.add_plugins(GridPlugin);
+        app.replicate::<PlayerId>();
+    }
+}

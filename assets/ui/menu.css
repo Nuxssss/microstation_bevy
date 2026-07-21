@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Terminus";
+    src: url("fonts/Terminus.ttf");
+}
+
+#MenuRoot {
+    --bg:           rgb(4%, 5%, 7%);
+    --field-bg:     rgb(8%, 10%, 12%);
+    --border-dim:   rgb(16%, 30%, 35%);
+    --border-soft:  rgb(20%, 38%, 43%);
+    --label-text:   rgb(40%, 55%, 58%);
+    --field-text:   rgb(85%, 95%, 96%);
+    --accent:         rgb(4%, 68%, 79%);
+    --accent-hover:   rgb(15%, 80%, 89%);
+    --accent-active:  rgb(2%, 48%, 57%);
+    --text-on-accent: rgb(4%, 5%, 7%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 18px;
+    padding: 28px;
+
+    width: 380px;
+    height: 380px;
+    margin: auto;
+
+    background-color: var(--bg);
+    border: 1px solid var(--border-dim);
+    border-radius: 6px;
+
+    font-family: Terminus;
+}
+
+#LoginRow,
+#PasswordRow,
+#AddressRow {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    row-gap: 5px;
+}
+
+#LoginLabel,
+#PasswordLabel,
+#AddressLabel {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: rgb(58%, 75%, 79%);
+}
+
+#LoginInput,
+#PasswordInput,
+#AddressInput {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 34px;
+    padding: 4px 10px;
+
+    border: 1px solid var(--border-soft);
+    border-radius: 4px;
+    background-color: var(--field-bg);
+    color: var(--field-text);
+    transition: border-color 0.12s, background-color 0.12s;
+}
+
+#LoginInput:hover,
+#PasswordInput:hover,
+#AddressInput:hover {
+    border-color: var(--accent-hover);
+}
+
+#LoginInput:focus,
+#PasswordInput:focus,
+#AddressInput:focus {
+    border-color: var(--accent);
+    background-color: var(--accent);
+    color: var(--text-on-accent);
+}
+
+#ConnectButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 10px 32px;
+    border-radius: 4px;
+
+    background-color: var(--accent);
+    transition: background-color 0.12s;
+
+    &:hover {
+        background-color: var(--accent-hover);
+    }
+
+    &:active {
+        background-color: var(--accent-active);
+    }
+
+    text {
+        color: var(--text-on-accent);
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}

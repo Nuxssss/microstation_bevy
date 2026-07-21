@@ -1,0 +1,28 @@
+[package]
+name = "microstation_bevy_shared"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true, features = [
+    "bevy_core_pipeline",
+    "debug",
+    "bevy_log"
+] }
+
+bevy_replicon_renet = { workspace = true }
+bevy_replicon = { workspace = true }
+phf = { workspace = true }
+anyhow = "1.0.102"
+walkdir = "2.5.0"
+serde_with = "3.18.0"
+serde_json = "1.0.149"
+enum_dispatch = "0.3.13"
+serde-inline-default = "1.0.1"
+serde = { workspace = true }
+serde_bytes = { workspace = true }
+toml = "1.1.2+spec-1.1.0"
+
+[features]
+client = ["bevy/bevy_sprite", "bevy_replicon/client", "bevy_replicon_renet/client"]
+server = ["bevy_replicon/server", "bevy_replicon_renet/server"]

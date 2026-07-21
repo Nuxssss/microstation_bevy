@@ -1,0 +1,28 @@
+[package]
+name = "microstation_bevy_client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+microstation_bevy_shared = { path = "../microstation_bevy_shared", features = ["client"] }
+
+bevy = { workspace = true, features = [
+    "bevy_winit",
+    "bevy_core_pipeline",
+    "bevy_render",
+    "bevy_sprite",
+    "bevy_text",
+    "ui",
+    "bevy_asset",
+    "x11",
+    "wayland",
+    "debug",
+    "bevy_log",
+    "2d",
+    "file_watcher"
+] }
+bevy_replicon_renet  = { workspace = true }
+bevy_replicon        = { workspace = true }
+bevy_flair = "0.8.0"
+clap = { workspace = true }
+bevy_enhanced_input = "0.26.0"

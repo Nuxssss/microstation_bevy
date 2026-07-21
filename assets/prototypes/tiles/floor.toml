@@ -1,0 +1,7 @@
+
+
+[[prototypes]]
+id = "floor_steel"
+type = "tile"
+name = "tiles-steel-floor"
+sprite = "textures/tiles/steel.png"
