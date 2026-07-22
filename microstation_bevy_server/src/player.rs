@@ -1,10 +1,16 @@
 use bevy::prelude::*;
 use bevy_replicon::prelude::*;
 use bevy_replicon::shared::backend::connected_client::NetworkId;
-use microstation_bevy_shared::{grid::Position, player::PlayerId};
+use microstation_bevy_shared::{
+    grid::Position,
+    player::{MoveSpeed, PlayerId},
+};
 
 #[derive(Component)]
 pub struct PlayerController(pub Entity);
+
+#[derive(Component)]
+pub struct MoveCooldown(pub Timer);
 
 //TODO: пока что игрок спавнится сразу же когда клиент подключается к этоуй хуйне
 // и это надо переделать так чтобы функция спавна реагировало на событие создания игрока или что то вроде
@@ -17,11 +23,24 @@ pub fn spawn_player(
     let Ok(id) = network_ids.get(trigger.entity).map(|x| x.get()) else {
         return;
     };
+    let speed = 10.;
     let entity = commands
-        .spawn((PlayerId(id), Position((0, 0).into()), Replicated))
+        .spawn((
+            PlayerId(id),
+            Position((0, 0).into()),
+            MoveSpeed(speed),
+            MoveCooldown(Timer::from_seconds(1.0 / speed, TimerMode::Once)),
+            Replicated,
+        ))
         .id();
     commands
         .entity(trigger.entity)
         .insert(PlayerController(entity));
     debug!("spawned player: {}", entity);
+}
+
+pub fn move_cooldown_tick(cooldowns: Query<&mut MoveCooldown>, time: Res<Time>) {
+    for mut cooldown in cooldowns {
+        cooldown.0.tick(time.delta());
+    }
 }

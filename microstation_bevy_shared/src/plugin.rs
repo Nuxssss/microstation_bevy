@@ -1,5 +1,7 @@
 use crate::{
-    actions::ActionPlugin, grid::plugin::GridPlugin, player::PlayerId,
+    actions::ActionPlugin,
+    grid::plugin::GridPlugin,
+    player::{MoveSpeed, PlayerId},
     prototype::plugin::PrototypePlugin,
 };
 use bevy::prelude::*;
@@ -13,5 +15,6 @@ impl Plugin for SharedPlugin {
         app.add_plugins(ActionPlugin);
         app.add_plugins(GridPlugin);
         app.replicate::<PlayerId>();
+        app.replicate::<MoveSpeed>();
     }
 }

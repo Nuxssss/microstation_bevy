@@ -3,3 +3,6 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Component, Serialize, Deserialize)]
 pub struct PlayerId(pub u64);
+
+#[derive(Component, Serialize, Deserialize)]
+pub struct MoveSpeed(pub f32);

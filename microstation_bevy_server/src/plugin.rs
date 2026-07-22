@@ -1,10 +1,13 @@
+use std::time::Duration;
+
 use crate::map::plugin::MapPlugin;
-use crate::player::PlayerController;
+use crate::player::{MoveCooldown, PlayerController, move_cooldown_tick};
 use crate::{network::NetworkServerPlugin, player::spawn_player};
 use bevy::prelude::*;
 use bevy_replicon::prelude::{ClientId, FromClient};
 use microstation_bevy_shared::actions::Move;
 use microstation_bevy_shared::grid::Position;
+use microstation_bevy_shared::player::MoveSpeed;
 use microstation_bevy_shared::prototype::plugin::PrototypeLoad;
 // сервер - потому что все системы, запускающиеся здесь, специфичны для сервера
 
@@ -24,6 +27,7 @@ impl Plugin for ServerPlugin {
         app.add_plugins(MapPlugin);
         app.configure_sets(Startup, (PrototypeLoad,));
         app.add_systems(Update, skip_waiting.run_if(in_state(ServerState::Waiting)));
+        app.add_systems(Update, move_cooldown_tick);
         app.add_observer(spawn_player.run_if(in_state(ServerState::Round))); //TODO Убрать/переделать когда будет сделано лобби
         app.add_observer(on_move);
     }
@@ -37,7 +41,7 @@ fn skip_waiting(mut next_state: ResMut<NextState<ServerState>>) {
 fn on_move(
     trigger: On<FromClient<Move>>,
     controllers: Query<&PlayerController>,
-    mut positions: Query<&mut Position>,
+    mut positions: Query<(&mut Position, &mut MoveCooldown, &MoveSpeed)>,
 ) {
     let ClientId::Client(e) = trigger.client_id else {
         warn!("the move action isn't triggered by the client");
@@ -47,9 +51,16 @@ fn on_move(
         return;
     };
 
-    let Ok(mut pos) = positions.get_mut(*e) else {
+    let Ok((mut pos, mut cooldown, speed)) = positions.get_mut(*e) else {
         warn!("player {} haven't position component", e);
         return;
     };
+    if !cooldown.0.is_finished() {
+        return;
+    }
     pos.0 += trigger.0.as_ivec2();
+    cooldown
+        .0
+        .set_duration(Duration::from_secs_f32(1. / speed.0 * trigger.0.length()));
+    cooldown.0.reset();
 }

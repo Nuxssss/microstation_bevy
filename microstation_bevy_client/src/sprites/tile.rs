@@ -5,6 +5,8 @@ use microstation_bevy_shared::{
 };
 use std::collections::HashMap;
 
+pub const TILE_SIZE: f32 = 32.;
+
 #[derive(Resource, Debug, Default)]
 pub struct TileSprites {
     pub sprites: Vec<Handle<Image>>,
