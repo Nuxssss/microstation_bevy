@@ -1,9 +1,11 @@
 mod cli;
 mod input;
+pub mod map;
 pub mod menu;
 mod network;
 mod player;
 mod plugin;
+pub mod prototype;
 mod sprites;
 
 use crate::cli::ClientArgs;

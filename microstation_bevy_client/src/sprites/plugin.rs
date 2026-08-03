@@ -1,7 +1,5 @@
 use bevy::prelude::*;
-use microstation_bevy_shared::grid::tile_registry::TileRegistry;
-
-use crate::sprites::chunk::on_chunk_added;
+use microstation_bevy_shared::map::tile_registry::TileRegistry;
 
 use super::{
     chunk::sync_chunk_sprites,
@@ -18,6 +16,5 @@ impl Plugin for GameSpritesPlugin {
             Update,
             reload_tile_sprites.run_if(resource_changed::<TileRegistry>),
         );
-        app.add_observer(on_chunk_added);
     }
 }

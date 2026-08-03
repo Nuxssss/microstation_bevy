@@ -21,7 +21,8 @@ enum_dispatch = "0.3.13"
 serde-inline-default = "1.0.1"
 serde = { workspace = true }
 serde_bytes = { workspace = true }
-toml = "1.1.2+spec-1.1.0"
+toml = "1.1.2"
+bitvec = "1.1.1"
 
 [features]
 client = ["bevy/bevy_sprite", "bevy_replicon/client", "bevy_replicon_renet/client"]

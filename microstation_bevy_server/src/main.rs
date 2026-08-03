@@ -3,11 +3,12 @@ mod map;
 mod network;
 mod player;
 mod plugin;
+pub mod prototype;
 
 use crate::cli::ServerArgs;
 use crate::plugin::ServerPlugin;
 use bevy::ecs;
-use bevy::log::{Level, LogPlugin};
+use bevy::log::LogPlugin;
 use bevy::prelude::*;
 use bevy::state::app::StatesPlugin;
 use clap::Parser;

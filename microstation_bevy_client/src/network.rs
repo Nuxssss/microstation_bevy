@@ -33,22 +33,14 @@ fn connect_to_server(
     mut commands: Commands,
     connect: Res<PendingConnection>,
     mut next_state: ResMut<NextState<ClientState>>,
-) {
-    let server_addr: SocketAddr = match connect.address.parse() {
-        Ok(a) => a,
-        Err(e) => {
-            error!("{e}");
-            return;
-        }
-    };
-
-    let socket = UdpSocket::bind("0.0.0.0:0").unwrap();
-    let current_time = SystemTime::now()
-        .duration_since(SystemTime::UNIX_EPOCH)
-        .unwrap();
+) -> Result<()> {
+    let server_addr: SocketAddr = connect.address.parse()?;
+    let socket = UdpSocket::bind("0.0.0.0:0")?;
+    let current_time = SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)?;
 
     let cid = current_time.as_millis() as u64;
 
+    //TODO: сделать аутентификацию по токену, вместо случайного client_id
     let authentication = ClientAuthentication::Unsecure {
         server_addr,
         client_id: cid,
@@ -56,7 +48,7 @@ fn connect_to_server(
         protocol_id: PROTOCOL_ID,
     };
 
-    let transport = NetcodeClientTransport::new(current_time, authentication, socket).unwrap();
+    let transport = NetcodeClientTransport::new(current_time, authentication, socket)?;
     let client = RenetClient::new(Default::default());
 
     commands.insert_resource(client);
@@ -65,4 +57,5 @@ fn connect_to_server(
     info!("Connect to {server_addr}");
     next_state.set(ClientState::InGame);
     commands.remove_resource::<PendingConnection>();
+    Ok(())
 }

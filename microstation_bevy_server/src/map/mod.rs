@@ -1,12 +1,12 @@
 use bevy::prelude::*;
 use bevy_replicon::prelude::*;
-use bevy_replicon::shared::replication::diff::WorldDiffExt;
 use microstation_bevy_shared::{
-    grid::tile_registry::{self, TileRegistry, TileRegistryDiff},
+    map::tile_registry::{TileRegistry, TileRegistryDiff},
     prototype::{PrototypeKind, PrototypeManager},
 };
 
 mod generation;
+pub mod occupancy;
 pub mod plugin;
 
 pub fn register_tiles(prototypes: Res<PrototypeManager>, mut commands: Commands) {

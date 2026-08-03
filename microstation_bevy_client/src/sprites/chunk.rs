@@ -1,24 +1,15 @@
 // microstation_bevy_client/src/sprites/chunk.rs
 use bevy::prelude::*;
-use microstation_bevy_shared::grid::{CHUNK_SIZE, Chunk};
+use microstation_bevy_shared::map::CHUNK_SIZE;
+use microstation_bevy_shared::map::tile::TileChunk;
 
 use crate::sprites::tile::TileSprites;
 
 pub const TILE_SIZE: f32 = 32.0;
 
-pub fn on_chunk_added(trigger: On<Add, Chunk>, chunks: Query<&Chunk>, mut commands: Commands) {
-    let Ok(chunk) = chunks.get(trigger.entity) else {
-        return;
-    };
-    debug!("chunk {} added at {}", trigger.entity, chunk.crd);
-    commands
-        .entity(trigger.entity)
-        .insert((Transform::default(), Visibility::default()));
-}
-
 pub fn sync_chunk_sprites(
     mut commands: Commands,
-    chunks: Query<(Entity, &Chunk), Changed<Chunk>>,
+    chunks: Query<(Entity, &TileChunk), Changed<TileChunk>>,
     tile_sprites: Res<TileSprites>,
 ) {
     for (chunk_entity, chunk) in &chunks {

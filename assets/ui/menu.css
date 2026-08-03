@@ -1,18 +1,19 @@
+/* Визуальное оформление и правда говно. Признаюсь. На данный момент это просто POC, надеюсь, будет переделано в будущем */
 @font-face {
     font-family: "Terminus";
     src: url("fonts/Terminus.ttf");
 }
 
 #MenuRoot {
-    --bg:           rgb(4%, 5%, 7%);
-    --field-bg:     rgb(8%, 10%, 12%);
-    --border-dim:   rgb(16%, 30%, 35%);
-    --border-soft:  rgb(20%, 38%, 43%);
-    --label-text:   rgb(40%, 55%, 58%);
-    --field-text:   rgb(85%, 95%, 96%);
-    --accent:         rgb(4%, 68%, 79%);
-    --accent-hover:   rgb(15%, 80%, 89%);
-    --accent-active:  rgb(2%, 48%, 57%);
+    --bg: rgb(4%, 5%, 7%);
+    --field-bg: rgb(8%, 10%, 12%);
+    --border-dim: rgb(16%, 30%, 35%);
+    --border-soft: rgb(20%, 38%, 43%);
+    --label-text: rgb(40%, 55%, 58%);
+    --field-text: rgb(85%, 95%, 96%);
+    --accent: rgb(4%, 68%, 79%);
+    --accent-hover: rgb(15%, 80%, 89%);
+    --accent-active: rgb(2%, 48%, 57%);
     --text-on-accent: rgb(4%, 5%, 7%);
 
     display: flex;
@@ -63,7 +64,9 @@
     border-radius: 4px;
     background-color: var(--field-bg);
     color: var(--field-text);
-    transition: border-color 0.12s, background-color 0.12s;
+    transition:
+        border-color 0.12s,
+        background-color 0.12s;
 }
 
 #LoginInput:hover,

@@ -2,8 +2,15 @@ mod loader;
 pub mod plugin;
 
 use bevy::prelude::*;
-use serde::Deserialize;
+use bevy_replicon::shared::replication::Replicated;
+use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
+
+use crate::map::{Position, occupancy::BlocksMovement};
+
+/// Component that represent the ID of the prototype from which this entity was created
+#[derive(Component, Serialize, Deserialize)]
+pub struct PrototypeId(pub String);
 
 #[derive(Resource, Default)]
 pub struct PrototypeManager {
@@ -34,8 +41,25 @@ pub struct TilePrototype {
 
 #[derive(Deserialize)]
 pub struct EntityPrototype {
-    pub components: HashMap<String, EntityPrototypeComponent>,
+    pub components: Vec<EntityPrototypeComponent>,
 }
 
 #[derive(Deserialize)]
-pub enum EntityPrototypeComponent {}
+#[serde(rename_all = "snake_case", tag = "type")]
+pub enum EntityPrototypeComponent {
+    Sprite(SpriteInfo),
+    BlocksMovement,
+}
+
+#[derive(Deserialize, Serialize)]
+pub struct SpriteInfo {
+    pub path: String,
+    pub mode: SpriteMode,
+}
+
+#[derive(Deserialize, Serialize, Default)]
+pub enum SpriteMode {
+    #[default]
+    Simple,
+    Wall,
+}

@@ -1,6 +1,6 @@
 use crate::{
     actions::ActionPlugin,
-    grid::plugin::GridPlugin,
+    map::plugin::GridPlugin,
     player::{MoveSpeed, PlayerId},
     prototype::plugin::PrototypePlugin,
 };
@@ -16,5 +16,6 @@ impl Plugin for SharedPlugin {
         app.add_plugins(GridPlugin);
         app.replicate::<PlayerId>();
         app.replicate::<MoveSpeed>();
+        app.replicate::<Name>();
     }
 }

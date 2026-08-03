@@ -6,9 +6,9 @@ pub struct ActionPlugin;
 
 impl Plugin for ActionPlugin {
     fn build(&self, app: &mut App) {
-        app.add_client_event::<Move>(Channel::Ordered);
+        app.add_client_event::<PlayerMove>(Channel::Ordered);
     }
 }
 
 #[derive(Event, Serialize, Deserialize, Clone, Copy)]
-pub struct Move(pub Vec2);
+pub struct PlayerMove(pub Vec2);

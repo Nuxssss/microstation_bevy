@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use microstation_bevy_shared::{
-    grid::Position,
+    map::Position,
     player::{MoveSpeed, PlayerId},
 };
 

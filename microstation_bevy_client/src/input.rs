@@ -29,7 +29,7 @@ pub fn add_actions_and_bindings(trigger: On<Add, PlayerController>, mut commands
 }
 
 pub fn on_move(trigger: On<Fire<Move>>, mut commands: Commands) {
-    commands.client_trigger(actions::Move(trigger.value));
+    commands.client_trigger(actions::PlayerMove(trigger.value));
 }
 
 #[derive(Component)]

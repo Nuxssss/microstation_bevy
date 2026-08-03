@@ -1,0 +1,11 @@
+
+[[prototypes]]
+type = "entity"
+id = "steel_wall"
+name = "Steel Wall"
+[[prototypes.components]]
+type = "sprite"
+mode = "wall"
+sprite = "textures/entities/structures/steel_wall{}.png"
+[[prototypes.components]]
+type = "blocks_movement"

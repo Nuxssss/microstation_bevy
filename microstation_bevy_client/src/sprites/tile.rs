@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use microstation_bevy_shared::{
-    grid::tile_registry::{self, TileRegistry},
+    map::tile_registry::TileRegistry,
     prototype::{PrototypeKind, PrototypeManager},
 };
 use std::collections::HashMap;

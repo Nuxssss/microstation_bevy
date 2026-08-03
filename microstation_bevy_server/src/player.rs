@@ -2,7 +2,7 @@ use bevy::prelude::*;
 use bevy_replicon::prelude::*;
 use bevy_replicon::shared::backend::connected_client::NetworkId;
 use microstation_bevy_shared::{
-    grid::Position,
+    map::Position,
     player::{MoveSpeed, PlayerId},
 };
 
@@ -19,10 +19,8 @@ pub fn spawn_player(
     trigger: On<Add, ConnectedClient>,
     network_ids: Query<&NetworkId>,
     mut commands: Commands,
-) {
-    let Ok(id) = network_ids.get(trigger.entity).map(|x| x.get()) else {
-        return;
-    };
+) -> Result<()> {
+    let id = network_ids.get(trigger.entity).map(|x| x.get())?;
     let speed = 10.;
     let entity = commands
         .spawn((
@@ -37,6 +35,7 @@ pub fn spawn_player(
         .entity(trigger.entity)
         .insert(PlayerController(entity));
     debug!("spawned player: {}", entity);
+    Ok(())
 }
 
 pub fn move_cooldown_tick(cooldowns: Query<&mut MoveCooldown>, time: Res<Time>) {

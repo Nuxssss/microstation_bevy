@@ -23,6 +23,8 @@ bevy = { workspace = true, features = [
 ] }
 bevy_replicon_renet  = { workspace = true }
 bevy_replicon        = { workspace = true }
+bevy_ecs_tilemap     = { workspace = true }
+bitvec               = { workspace = true }
+clap                 = { workspace = true }
 bevy_flair = "0.8.0"
-clap = { workspace = true }
 bevy_enhanced_input = "0.26.0"

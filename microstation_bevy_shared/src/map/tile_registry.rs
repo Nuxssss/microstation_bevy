@@ -1,8 +1,5 @@
 use bevy::{platform::collections::HashMap, prelude::*};
-use bevy_replicon::{
-    prelude::Diffable,
-    shared::replication::{Replicated, signature::Signature},
-};
+use bevy_replicon::{prelude::Diffable, shared::replication::signature::Signature};
 use serde::{Deserialize, Serialize};
 
 #[derive(Resource, Serialize, Deserialize, Debug)]
@@ -45,12 +42,22 @@ impl Diffable for TileRegistry {
 }
 
 impl TileRegistry {
-    pub fn name_of(&self, id: u8) -> Option<&str> {
-        self.tiles.get(id as usize).map(String::as_str)
+    pub fn get_name(&self, idx: u8) -> Result<&str> {
+        self.tiles
+            .get(idx as usize)
+            .map(String::as_str)
+            .ok_or(BevyError::error(
+                format!("tile with index {} not found", idx).as_str(),
+            ))
     }
 
-    pub fn id_of(&self, name: &str) -> Option<u8> {
-        self.tiles_ids.get(name).map(|&i| i as u8)
+    pub fn get_idx(&self, name: &str) -> Result<u8> {
+        self.tiles_ids
+            .get(name)
+            .map(|&i| i as u8)
+            .ok_or(BevyError::error(
+                format!("tile {} not found", name).as_str(),
+            ))
     }
     pub fn tiles(&self) -> impl Iterator<Item = &String> {
         self.tiles.iter()
@@ -61,7 +68,7 @@ impl Default for TileRegistry {
     fn default() -> Self {
         let mut tiles = Vec::new();
         let mut tiles_ids = HashMap::new();
-        tiles.push("void".to_string()); // id 0 = пусто, зарезервировано
+        tiles.push("void".to_string());
         tiles_ids.insert("void".to_string(), 0);
         Self { tiles, tiles_ids }
     }

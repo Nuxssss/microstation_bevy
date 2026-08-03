@@ -20,36 +20,41 @@ impl Plugin for NetworkServerPlugin {
     }
 }
 
-fn start_server(mut commands: Commands) {
-    let bind_addr: SocketAddr = format!("{SERVER_ADDR}:{SERVER_PORT}").parse().unwrap();
-    let socket = UdpSocket::bind(bind_addr).unwrap();
-    let current_time = SystemTime::now()
-        .duration_since(SystemTime::UNIX_EPOCH)
-        .unwrap();
+fn start_server(mut commands: Commands) -> Result<()> {
+    let bind_addr: SocketAddr = format!("{SERVER_ADDR}:{SERVER_PORT}").parse()?;
+    let socket = UdpSocket::bind(bind_addr)?;
+    let current_time = SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)?;
 
     let server_config = ServerConfig {
         current_time,
         max_clients: MAX_CLIENTS,
         protocol_id: PROTOCOL_ID,
         public_addresses: vec![bind_addr],
-        authentication: ServerAuthentication::Unsecure,
+        authentication: ServerAuthentication::Unsecure, //TODO: сделать аутентификацию
     };
 
-    let transport = NetcodeServerTransport::new(server_config, socket).unwrap();
+    let transport = NetcodeServerTransport::new(server_config, socket)?;
+
     let server = RenetServer::new(Default::default());
 
     commands.insert_resource(server);
     commands.insert_resource(transport);
 
     info!("Listening {bind_addr}");
+    Ok(())
 }
 
-fn log_connection(trigger: On<Add, ConnectedClient>, network_ids: Query<&NetworkId>) {
-    let id = network_ids.get(trigger.entity).unwrap().get();
+fn log_connection(trigger: On<Add, ConnectedClient>, network_ids: Query<&NetworkId>) -> Result<()> {
+    let id = network_ids.get(trigger.entity)?.get();
     info!("client {id} connected!");
+    Ok(())
 }
 
-fn log_disconnection(trigger: On<FromClient<DisconnectRequest>>, network_ids: Query<&NetworkId>) {
-    let id = network_ids.get(trigger.client).unwrap().get();
+fn log_disconnection(
+    trigger: On<FromClient<DisconnectRequest>>,
+    network_ids: Query<&NetworkId>,
+) -> Result<()> {
+    let id = network_ids.get(trigger.client)?.get();
     info!("client {id} disconnected!");
+    Ok(())
 }

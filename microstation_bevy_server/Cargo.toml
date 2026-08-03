@@ -4,14 +4,16 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-microstation_bevy_shared = { path = "../microstation_bevy_shared", feature = ["server"] }
+microstation_bevy_shared = { path = "../microstation_bevy_shared", features = ["server"] }
 
 bevy = { workspace = true, features = [
     "multi_threaded",
     "debug",
     "bevy_log"
 ] }
+bitvec = { workspace = true }
 bevy_replicon        = { workspace = true }
 bevy_replicon_renet  = { workspace = true }
 serde                = { workspace = true }
+serde_bytes = { workspace = true }
 clap = { workspace = true }

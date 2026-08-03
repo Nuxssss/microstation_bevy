@@ -1,8 +1,10 @@
 use crate::cli::ClientArgs;
 use crate::input::InputPlugin;
+use crate::map::plugin::MapClientPlugin;
 use crate::menu::{menu, on_try_connect};
 use crate::network::{NetworkClientPlugin, PendingConnection};
 use crate::player::{follow_player, spawn_player, sync_player_sprites};
+use crate::prototype::plugin::PrototypeClientPlugin;
 use crate::sprites::plugin::GameSpritesPlugin;
 use bevy::prelude::*;
 use microstation_bevy_shared::from_args::Cli;
@@ -50,6 +52,8 @@ impl Plugin for ClientPlugin {
         app.add_plugins(NetworkClientPlugin);
         app.add_plugins(InputPlugin);
         app.add_plugins(GameSpritesPlugin);
+        app.add_plugins(PrototypeClientPlugin);
+        app.add_plugins(MapClientPlugin);
         app.configure_sets(Startup, (PrototypeLoad,));
         app.add_systems(Startup, camera_setup);
         app.add_observer(on_try_connect.run_if(in_state(ClientState::Menu)));
