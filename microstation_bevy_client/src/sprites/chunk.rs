@@ -27,10 +27,8 @@ pub fn sync_chunk_sprites(
                 continue;
             };
 
-            let local_pos = IVec2::new(
-                (local_idx % CHUNK_SIZE as usize) as i32,
-                (local_idx / CHUNK_SIZE as usize) as i32,
-            );
+            let local_pos =
+                IVec2::new(local_idx as i32 % CHUNK_SIZE, local_idx as i32 / CHUNK_SIZE);
 
             let world_pos = base_world + local_pos;
 

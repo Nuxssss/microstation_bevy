@@ -53,11 +53,13 @@ pub enum EntityPrototypeComponent {
 
 #[derive(Deserialize, Serialize)]
 pub struct SpriteInfo {
+    #[serde(rename = "sprite")]
     pub path: String,
     pub mode: SpriteMode,
 }
 
 #[derive(Deserialize, Serialize, Default)]
+#[serde(rename_all = "snake_case")]
 pub enum SpriteMode {
     #[default]
     Simple,

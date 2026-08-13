@@ -107,7 +107,7 @@ fn resolve_prototype(
             let child = raw_proto
                 .as_table()
                 .ok_or_else(|| format!("prototype `{}` is not a table", id))?;
-            merge_table(&mut base, child);
+            base.extend(child.clone());
             Value::Table(base)
         }
         None => raw_proto,
@@ -116,11 +116,4 @@ fn resolve_prototype(
     visiting.remove(id);
     resolved.insert(id.to_string(), merged.clone());
     Ok(merged)
-}
-
-/// Shallow merge: каждый ключ из overlay перезаписывает ключ в base.
-fn merge_table(base: &mut toml::value::Table, overlay: &toml::value::Table) {
-    for (k, v) in overlay {
-        base.insert(k.clone(), v.clone());
-    }
 }

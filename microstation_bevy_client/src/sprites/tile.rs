@@ -5,6 +5,18 @@ use microstation_bevy_shared::{
 };
 use std::collections::HashMap;
 
+pub struct TileSpritePlugin;
+
+impl Plugin for TileSpritePlugin {
+    fn build(&self, app: &mut App) {
+        app.init_resource::<TileSprites>();
+        app.add_systems(
+            Update,
+            reload_tile_sprites.run_if(resource_changed::<TileRegistry>),
+        );
+    }
+}
+
 pub const TILE_SIZE: f32 = 32.;
 
 #[derive(Resource, Debug, Default)]

@@ -1,9 +1,16 @@
-pub mod plugin;
 use bevy::prelude::*;
 use microstation_bevy_shared::{
     map::Position,
     prototype::{EntityPrototypeComponent, PrototypeId, PrototypeKind, PrototypeManager},
 };
+
+pub struct PrototypeClientPlugin;
+
+impl Plugin for PrototypeClientPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_observer(on_prototype_added);
+    }
+}
 
 use crate::sprites::tile::TILE_SIZE;
 
@@ -37,12 +44,20 @@ pub fn on_prototype_added(
     for component in &entity_proto.components {
         // only client components are handled here
         match component {
-            EntityPrototypeComponent::Sprite(sprite_info) => {
-                commands.entity(trigger.entity).insert(Sprite {
-                    image: asset_server.load(&sprite_info.path),
-                    ..Default::default()
-                });
-            }
+            EntityPrototypeComponent::Sprite(sprite_info) => match sprite_info.mode {
+                microstation_bevy_shared::prototype::SpriteMode::Simple => {
+                    commands.entity(trigger.entity).insert(Sprite {
+                        image: asset_server.load(&sprite_info.path),
+                        ..Default::default()
+                    });
+                }
+                microstation_bevy_shared::prototype::SpriteMode::Wall => {
+                    let texture = asset_server.load(&sprite_info.path);
+                    commands
+                        .entity(trigger.entity)
+                        .insert(crate::sprites::wall::WallSprite { texture, mask: 0 });
+                }
+            },
             _ => {}
         }
     }

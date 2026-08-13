@@ -4,7 +4,7 @@ use crate::map::plugin::MapClientPlugin;
 use crate::menu::{menu, on_try_connect};
 use crate::network::{NetworkClientPlugin, PendingConnection};
 use crate::player::{follow_player, spawn_player, sync_player_sprites};
-use crate::prototype::plugin::PrototypeClientPlugin;
+use crate::prototype::PrototypeClientPlugin;
 use crate::sprites::plugin::GameSpritesPlugin;
 use bevy::prelude::*;
 use microstation_bevy_shared::from_args::Cli;

@@ -6,6 +6,6 @@ name = "Steel Wall"
 [[prototypes.components]]
 type = "sprite"
 mode = "wall"
-sprite = "textures/entities/structures/steel_wall{}.png"
+sprite = "textures/entities/structures/steel_wall.png"
 [[prototypes.components]]
 type = "blocks_movement"

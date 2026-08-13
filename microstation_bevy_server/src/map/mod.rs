@@ -10,14 +10,9 @@ pub mod occupancy;
 pub mod plugin;
 
 pub fn register_tiles(prototypes: Res<PrototypeManager>, mut commands: Commands) {
-    let mut tile_ids = Vec::from(&["void".to_string()]);
-    let ids_from_protos = prototypes.prototypes.iter().filter_map(|(id, proto)| {
-        if let PrototypeKind::Tile(_) = &proto.proto {
-            Some(id.clone())
-        } else {
-            None
-        }
-    });
-    tile_ids.extend(ids_from_protos);
+    let mut tile_ids = vec!["void".to_string()];
+    tile_ids.extend(prototypes.prototypes.iter().filter_map(|(id, proto)| {
+        matches!(&proto.proto, PrototypeKind::Tile(_)).then(|| id.clone())
+    }));
     commands.apply_resource_diff::<TileRegistry>(TileRegistryDiff::UpdateTiles(tile_ids));
 }

@@ -21,7 +21,6 @@ debug = false
 bevy = { version = "0.19.0", default-features = false }
 bevy_replicon_renet = { version = "0.17.0", features = ["renet_netcode"] }
 bevy_replicon = { version = "0.41.1", features = ["world_serialization", "scene"] }
-bevy_ecs_tilemap = { version = "0.19.0" }
 serde = { version = "1.0.228", features = ["derive"] }
 toml = "1.1.2+spec-1.1.0"
 phf = { version = "0.14.0", features = ["macros"] }

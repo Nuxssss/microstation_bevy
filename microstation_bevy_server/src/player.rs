@@ -20,7 +20,7 @@ pub fn spawn_player(
     network_ids: Query<&NetworkId>,
     mut commands: Commands,
 ) -> Result<()> {
-    let id = network_ids.get(trigger.entity).map(|x| x.get())?;
+    let id = network_ids.get(trigger.entity)?.get();
     let speed = 10.;
     let entity = commands
         .spawn((

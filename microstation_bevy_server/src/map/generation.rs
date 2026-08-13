@@ -73,6 +73,9 @@ pub fn spawn_test_walls(mut commands: Commands, prototypes: Res<PrototypeManager
         zx += if zy % 2 == 0 { 1 } else { -1 };
     }
 
+    // одна стена
+    walls.push(IVec2::new(12, 12));
+
     for pos in walls {
         spawn_prototype(&mut commands, &prototypes, "steel_wall", pos)?;
     }

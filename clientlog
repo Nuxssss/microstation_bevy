@@ -1,0 +1,564 @@
+warning: unused import: `bevy_replicon::shared::replication::Replicated`
+ --> microstation_bevy_shared/src/prototype/mod.rs:5:5
+  |
+5 | use bevy_replicon::shared::replication::Replicated;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `Position` and `occupancy::BlocksMovement`
+ --> microstation_bevy_shared/src/prototype/mod.rs:9:18
+  |
+9 | use crate::map::{Position, occupancy::BlocksMovement};
+  |                  ^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `microstation_bevy_shared` (lib) generated 2 warnings (run `cargo fix --lib -p microstation_bevy_shared` to apply 2 suggestions)
+warning: fields `login` and `password` are never read
+  --> microstation_bevy_client/src/network.rs:14:9
+   |
+13 | pub struct PendingConnection {
+   |            ----------------- fields in this struct
+14 |     pub login: String,
+   |         ^^^^^
+15 |     pub password: String,
+   |         ^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `microstation_bevy_client` (bin "microstation_bevy_client") generated 1 warning
+    Finished `dev` profile [optimized + debuginfo] target(s) in 0.35s
+     Running `target/debug/microstation_bevy_client -c -l debug`
+[2m2026-08-13T03:52:53.488759Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_app::task_pool_plugin::TaskPoolPlugin
+[2m2026-08-13T03:52:53.488792Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_app::task_pool_plugin::TaskPoolPlugin
+[2m2026-08-13T03:52:53.489819Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_diagnostic::frame_count::FrameCountPlugin
+[2m2026-08-13T03:52:53.489836Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_diagnostic::frame_count::FrameCountPlugin
+[2m2026-08-13T03:52:53.489878Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_time::TimePlugin
+[2m2026-08-13T03:52:53.489882Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_time::TimePlugin
+[2m2026-08-13T03:52:53.490006Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_transform::plugins::TransformPlugin
+[2m2026-08-13T03:52:53.490010Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_transform::plugins::TransformPlugin
+[2m2026-08-13T03:52:53.490016Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_app::hierarchy::ValidateParentHasComponentPlugin<bevy_transform::components::global_transform::GlobalTransform>
+[2m2026-08-13T03:52:53.490122Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_diagnostic::DiagnosticsPlugin
+[2m2026-08-13T03:52:53.490126Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_diagnostic::DiagnosticsPlugin
+[2m2026-08-13T03:52:53.491016Z[0m [32m INFO[0m [2mbevy_diagnostic::system_information_diagnostics_plugin::internal[0m[2m:[0m SystemInfo { os: "Linux (NixOS 26.05)", kernel: "6.18.38", cpu: "13th Gen Intel(R) Core(TM) i9-13900H", core_count: "14", memory: "15.3 GiB" }
+[2m2026-08-13T03:52:53.491039Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_input::InputPlugin
+[2m2026-08-13T03:52:53.491042Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_input::InputPlugin
+[2m2026-08-13T03:52:53.491273Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_input_focus::InputFocusPlugin
+[2m2026-08-13T03:52:53.491276Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_input_focus::InputFocusPlugin
+[2m2026-08-13T03:52:53.491314Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_input_focus::InputDispatchPlugin
+[2m2026-08-13T03:52:53.491318Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_input_focus::InputDispatchPlugin
+[2m2026-08-13T03:52:53.491333Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_window::WindowPlugin
+[2m2026-08-13T03:52:53.491346Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_window::WindowPlugin
+[2m2026-08-13T03:52:53.491587Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_a11y::AccessibilityPlugin
+[2m2026-08-13T03:52:53.491594Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_a11y::AccessibilityPlugin
+[2m2026-08-13T03:52:53.491622Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_app::terminal_ctrl_c_handler::TerminalCtrlCHandlerPlugin
+[2m2026-08-13T03:52:53.491626Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_app::terminal_ctrl_c_handler::TerminalCtrlCHandlerPlugin
+[2m2026-08-13T03:52:53.491690Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_asset::AssetPlugin
+[2m2026-08-13T03:52:53.491693Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_asset::AssetPlugin
+[2m2026-08-13T03:52:53.491726Z[0m [34mDEBUG[0m [2mbevy_asset::io::file[0m[2m:[0m Asset Server using /home/nuxs/other/microstation_bevy/microstation_bevy_client/../assets as its base path.
+[2m2026-08-13T03:52:53.492570Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_world_serialization::WorldSerializationPlugin
+[2m2026-08-13T03:52:53.492580Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_world_serialization::WorldSerializationPlugin
+[2m2026-08-13T03:52:53.492729Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_scene::ScenePlugin
+[2m2026-08-13T03:52:53.492732Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_scene::ScenePlugin
+[2m2026-08-13T03:52:53.492881Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_winit::WinitPlugin
+[2m2026-08-13T03:52:53.492884Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_winit::WinitPlugin
+[2m2026-08-13T03:52:53.493159Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m Bound new global [59] wl_output v4
+[2m2026-08-13T03:52:53.493170Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m Bound new global [9] zxdg_output_manager_v1 v3
+[2m2026-08-13T03:52:53.493187Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m Bound new global [56] wl_seat v7
+[2m2026-08-13T03:52:53.496448Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m Bound new global [49] wp_cursor_shape_manager_v1 v1
+[2m2026-08-13T03:52:53.496486Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Argb8888
+[2m2026-08-13T03:52:53.496497Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Xrgb8888
+[2m2026-08-13T03:52:53.496500Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Xbgr8888
+[2m2026-08-13T03:52:53.496503Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Abgr8888
+[2m2026-08-13T03:52:53.496508Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Bgr888
+[2m2026-08-13T03:52:53.496511Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Rgbx4444
+[2m2026-08-13T03:52:53.496514Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Rgba4444
+[2m2026-08-13T03:52:53.496517Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Rgbx5551
+[2m2026-08-13T03:52:53.496520Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Rgba5551
+[2m2026-08-13T03:52:53.496523Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Rgb565
+[2m2026-08-13T03:52:53.496534Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Xbgr2101010
+[2m2026-08-13T03:52:53.496538Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Abgr2101010
+[2m2026-08-13T03:52:53.496541Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Bgr161616f
+[2m2026-08-13T03:52:53.496543Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Xbgr16161616f
+[2m2026-08-13T03:52:53.496546Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Abgr16161616f
+[2m2026-08-13T03:52:53.496549Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Bgr161616
+[2m2026-08-13T03:52:53.496552Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Xbgr16161616
+[2m2026-08-13T03:52:53.496555Z[0m [34mDEBUG[0m [1mwinit::EventLoopBuilder::build[0m[2m:[0m [2msctk[0m[2m:[0m supported wl_shm format Abgr16161616
+[2m2026-08-13T03:52:53.496660Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_winit::accessibility::AccessKitPlugin
+[2m2026-08-13T03:52:53.496701Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_winit::cursor::WinitCursorPlugin
+[2m2026-08-13T03:52:53.496705Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_image::texture_atlas::TextureAtlasPlugin
+[2m2026-08-13T03:52:53.496825Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_render::RenderPlugin
+[2m2026-08-13T03:52:53.496828Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::RenderPlugin
+[2m2026-08-13T03:52:53.540575Z[0m [34mDEBUG[0m [2mbevy_render::renderer[0m[2m:[0m Searching for adapter with options: RequestAdapterOptions { power_preference: HighPerformance, force_fallback_adapter: false, compatible_surface: None }
+[2m2026-08-13T03:52:53.543284Z[0m [32m INFO[0m [2mbevy_render::renderer[0m[2m:[0m AdapterInfo { name: "Intel(R) Iris(R) Xe Graphics (RPL-P)", vendor: 32902, device: 42912, device_type: IntegratedGpu, device_pci_bus_id: "0000:00:02.0", driver: "Intel open-source Mesa driver", driver_info: "Mesa 26.1.4", backend: Vulkan, subgroup_min_size: 8, subgroup_max_size: 32, transient_saves_memory: false }
+[2m2026-08-13T03:52:53.571173Z[0m [34mDEBUG[0m [2mbevy_render::renderer[0m[2m:[0m Configured wgpu adapter Limits: Limits {
+    max_texture_dimension_1d: 16384,
+    max_texture_dimension_2d: 16384,
+    max_texture_dimension_3d: 2048,
+    max_texture_array_layers: 2048,
+    max_bind_groups: 8,
+    max_bindings_per_bind_group: 1024,
+    max_dynamic_uniform_buffers_per_pipeline_layout: 8,
+    max_dynamic_storage_buffers_per_pipeline_layout: 8,
+    max_sampled_textures_per_shader_stage: 102,
+    max_samplers_per_shader_stage: 103,
+    max_storage_buffers_per_shader_stage: 103,
+    max_storage_textures_per_shader_stage: 102,
+    max_uniform_buffers_per_shader_stage: 102,
+    max_binding_array_elements_per_shader_stage: 201326592,
+    max_binding_array_acceleration_structure_elements_per_shader_stage: 0,
+    max_binding_array_sampler_elements_per_shader_stage: 402653184,
+    max_uniform_buffer_binding_size: 1073741824,
+    max_storage_buffer_binding_size: 2147483644,
+    max_vertex_buffers: 16,
+    max_buffer_size: 2147483647,
+    max_vertex_attributes: 29,
+    max_vertex_buffer_array_stride: 4092,
+    max_inter_stage_shader_variables: 28,
+    min_uniform_buffer_offset_alignment: 64,
+    min_storage_buffer_offset_alignment: 32,
+    max_color_attachments: 8,
+    max_color_attachment_bytes_per_sample: 128,
+    max_compute_workgroup_storage_size: 49152,
+    max_compute_invocations_per_workgroup: 1024,
+    max_compute_workgroup_size_x: 1024,
+    max_compute_workgroup_size_y: 1024,
+    max_compute_workgroup_size_z: 1024,
+    max_compute_workgroups_per_dimension: 65535,
+    max_immediate_size: 256,
+    max_non_sampler_bindings: 4294967295,
+    max_task_mesh_workgroup_total_count: 0,
+    max_task_mesh_workgroups_per_dimension: 0,
+    max_task_invocations_per_workgroup: 0,
+    max_task_invocations_per_dimension: 0,
+    max_mesh_invocations_per_workgroup: 0,
+    max_mesh_invocations_per_dimension: 0,
+    max_task_payload_size: 0,
+    max_mesh_output_vertices: 0,
+    max_mesh_output_primitives: 0,
+    max_mesh_output_layers: 0,
+    max_mesh_multiview_view_count: 0,
+    max_blas_primitive_count: 0,
+    max_blas_geometry_count: 0,
+    max_tlas_instance_count: 0,
+    max_acceleration_structures_per_shader_stage: 0,
+    max_multiview_view_count: 16,
+}
+[2m2026-08-13T03:52:53.571235Z[0m [34mDEBUG[0m [2mbevy_render::renderer[0m[2m:[0m Configured wgpu adapter Features: Features {
+    features_wgpu: FeaturesWGPU(
+        TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | PIPELINE_STATISTICS_QUERY | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | BUFFER_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | POLYGON_MODE_POINT | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | MULTIVIEW | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | SHADER_I16 | SHADER_EARLY_DEPTH_TEST | SHADER_INT64 | SUBGROUP | SUBGROUP_VERTEX | SUBGROUP_BARRIER | PIPELINE_CACHE | TEXTURE_INT64_ATOMIC | PASSTHROUGH_SHADERS | SELECTIVE_MULTIVIEW | MULTISAMPLE_ARRAY | SHADER_DRAW_INDEX | MEMORY_DECORATION_COHERENT | MEMORY_DECORATION_VOLATILE,
+    ),
+    features_webgpu: FeaturesWebGPU(
+        DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TEXTURE_COMPRESSION_ETC2 | TEXTURE_COMPRESSION_ASTC | TEXTURE_COMPRESSION_ASTC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | SHADER_F16 | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | CLIP_DISTANCES | IMMEDIATES | PRIMITIVE_INDEX,
+    ),
+}
+[2m2026-08-13T03:52:53.571302Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_plugin::ExtractPlugin
+[2m2026-08-13T03:52:53.571308Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_world::SyncWorldPlugin
+[2m2026-08-13T03:52:53.571547Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::view::window::WindowRenderPlugin
+[2m2026-08-13T03:52:53.571578Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::view::window::screenshot::ScreenshotPlugin
+[2m2026-08-13T03:52:53.571708Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::camera::CameraPlugin
+[2m2026-08-13T03:52:53.571777Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_resource::ExtractResourcePlugin<bevy_camera::clear_color::ClearColor>
+[2m2026-08-13T03:52:53.571786Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_camera::camera::CameraMainTextureUsages>
+[2m2026-08-13T03:52:53.571810Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_camera::camera::CameraMainTextureUsages>
+[2m2026-08-13T03:52:53.571898Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::view::ViewPlugin
+[2m2026-08-13T03:52:53.571957Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_render::view::Msaa>
+[2m2026-08-13T03:52:53.571979Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_render::view::Msaa>
+[2m2026-08-13T03:52:53.571995Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_render::occlusion_culling::OcclusionCulling>
+[2m2026-08-13T03:52:53.572011Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_render::occlusion_culling::OcclusionCulling>
+[2m2026-08-13T03:52:53.572021Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::view::visibility::range::RenderVisibilityRangePlugin
+[2m2026-08-13T03:52:53.572052Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::mesh::MeshRenderAssetPlugin
+[2m2026-08-13T03:52:53.572076Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_asset::RenderAssetPlugin<bevy_render::mesh::RenderMesh, bevy_render::texture::gpu_image::GpuImage>
+[2m2026-08-13T03:52:53.572147Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::mesh::allocator::MeshAllocatorPlugin
+[2m2026-08-13T03:52:53.572169Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::globals::GlobalsPlugin
+[2m2026-08-13T03:52:53.572210Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::texture::TexturePlugin
+[2m2026-08-13T03:52:53.572233Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_asset::RenderAssetPlugin<bevy_render::texture::gpu_image::GpuImage>
+[2m2026-08-13T03:52:53.572281Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_resource::ExtractResourcePlugin<bevy_render::texture::manual_texture_view::ManualTextureViews>
+[2m2026-08-13T03:52:53.572309Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::batching::gpu_preprocessing::BatchingPlugin
+[2m2026-08-13T03:52:53.572334Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::storage::StoragePlugin
+[2m2026-08-13T03:52:53.572357Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_asset::RenderAssetPlugin<bevy_render::storage::GpuShaderBuffer>
+[2m2026-08-13T03:52:53.572475Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::gpu_readback::GpuReadbackPlugin
+[2m2026-08-13T03:52:53.572509Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_render::gpu_readback::Readback>
+[2m2026-08-13T03:52:53.572533Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_render::gpu_readback::Readback>
+[2m2026-08-13T03:52:53.572567Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::occlusion_culling::OcclusionCullingPlugin
+[2m2026-08-13T03:52:53.572587Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_resource::sparse_buffer_vec::SparseBufferPlugin
+[2m2026-08-13T03:52:53.574691Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_image::image::ImagePlugin
+[2m2026-08-13T03:52:53.574712Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_image::image::ImagePlugin
+[2m2026-08-13T03:52:53.574811Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_mesh::MeshPlugin
+[2m2026-08-13T03:52:53.574815Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_mesh::MeshPlugin
+[2m2026-08-13T03:52:53.574946Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_camera::CameraPlugin
+[2m2026-08-13T03:52:53.574950Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_camera::CameraPlugin
+[2m2026-08-13T03:52:53.575014Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_camera::projection::CameraProjectionPlugin
+[2m2026-08-13T03:52:53.575039Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_camera::visibility::VisibilityPlugin
+[2m2026-08-13T03:52:53.575069Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_app::hierarchy::ValidateParentHasComponentPlugin<bevy_camera::visibility::InheritedVisibility>
+[2m2026-08-13T03:52:53.575159Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_camera::visibility::range::VisibilityRangePlugin
+[2m2026-08-13T03:52:53.575173Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_render::pipelined_rendering::PipelinedRenderingPlugin
+[2m2026-08-13T03:52:53.575176Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::pipelined_rendering::PipelinedRenderingPlugin
+[2m2026-08-13T03:52:53.575217Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_core_pipeline::CorePipelinePlugin
+[2m2026-08-13T03:52:53.575220Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::CorePipelinePlugin
+[2m2026-08-13T03:52:53.575293Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::core_2d::Core2dPlugin
+[2m2026-08-13T03:52:53.575364Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_camera::components::Camera2d>
+[2m2026-08-13T03:52:53.575393Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_camera::components::Camera2d>
+[2m2026-08-13T03:52:53.575517Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::core_3d::Core3dPlugin
+[2m2026-08-13T03:52:53.575564Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::skybox::SkyboxPlugin
+[2m2026-08-13T03:52:53.575631Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_light::probe::Skybox, bevy_core_pipeline::skybox::SkyboxPlugin>
+[2m2026-08-13T03:52:53.575639Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::uniform::UniformComponentPlugin<bevy_core_pipeline::skybox::SkyboxUniforms>
+[2m2026-08-13T03:52:53.575663Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_camera::components::Camera3d>
+[2m2026-08-13T03:52:53.575697Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_camera::components::Camera3d>
+[2m2026-08-13T03:52:53.575890Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::deferred::copy_lighting_id::CopyDeferredLightingIdPlugin
+[2m2026-08-13T03:52:53.575943Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::blit::BlitPlugin
+[2m2026-08-13T03:52:53.575965Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::tonemapping::TonemappingPlugin
+[2m2026-08-13T03:52:53.576041Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_resource::ExtractResourcePlugin<bevy_core_pipeline::tonemapping::TonemappingLuts>
+[2m2026-08-13T03:52:53.576074Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_core_pipeline::tonemapping::Tonemapping>
+[2m2026-08-13T03:52:53.576100Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_core_pipeline::tonemapping::Tonemapping>
+[2m2026-08-13T03:52:53.576112Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_core_pipeline::tonemapping::DebandDither>
+[2m2026-08-13T03:52:53.576138Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_core_pipeline::tonemapping::DebandDither>
+[2m2026-08-13T03:52:53.576165Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::upscaling::UpscalingPlugin
+[2m2026-08-13T03:52:53.576178Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::oit::OrderIndependentTransparencyPlugin
+[2m2026-08-13T03:52:53.576218Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_core_pipeline::oit::OrderIndependentTransparencySettings>
+[2m2026-08-13T03:52:53.576245Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_core_pipeline::oit::OrderIndependentTransparencySettings>
+[2m2026-08-13T03:52:53.576255Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::oit::resolve::OitResolvePlugin
+[2m2026-08-13T03:52:53.576276Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::mip_generation::MipGenerationPlugin
+[2m2026-08-13T03:52:53.633209Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_core_pipeline::prepass::background_motion_vectors::BackgroundMotionVectorsPlugin
+[2m2026-08-13T03:52:53.633313Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_core_pipeline::prepass::background_motion_vectors::NoBackgroundMotionVectors>
+[2m2026-08-13T03:52:53.633345Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_core_pipeline::prepass::background_motion_vectors::NoBackgroundMotionVectors>
+[2m2026-08-13T03:52:53.633393Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_post_process::PostProcessPlugin
+[2m2026-08-13T03:52:53.633397Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_post_process::PostProcessPlugin
+[2m2026-08-13T03:52:53.633458Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_post_process::msaa_writeback::MsaaWritebackPlugin
+[2m2026-08-13T03:52:53.633504Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_post_process::bloom::BloomPlugin
+[2m2026-08-13T03:52:53.633547Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_post_process::bloom::settings::Bloom>
+[2m2026-08-13T03:52:53.633576Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_post_process::bloom::settings::Bloom>
+[2m2026-08-13T03:52:53.633594Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::uniform::UniformComponentPlugin<bevy_post_process::bloom::downsampling_pipeline::BloomUniforms>
+[2m2026-08-13T03:52:53.633636Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_post_process::motion_blur::MotionBlurPlugin
+[2m2026-08-13T03:52:53.633677Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_post_process::motion_blur::MotionBlur>
+[2m2026-08-13T03:52:53.633707Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_post_process::motion_blur::MotionBlur>
+[2m2026-08-13T03:52:53.633717Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::uniform::UniformComponentPlugin<bevy_post_process::motion_blur::MotionBlurUniform>
+[2m2026-08-13T03:52:53.633741Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_post_process::dof::DepthOfFieldPlugin
+[2m2026-08-13T03:52:53.633779Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::uniform::UniformComponentPlugin<bevy_post_process::dof::DepthOfFieldUniform>
+[2m2026-08-13T03:52:53.633811Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_post_process::dof::DepthOfField>
+[2m2026-08-13T03:52:53.633846Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_post_process::effect_stack::EffectStackPlugin
+[2m2026-08-13T03:52:53.633923Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_post_process::effect_stack::chromatic_aberration::ChromaticAberration>
+[2m2026-08-13T03:52:53.633958Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_post_process::effect_stack::chromatic_aberration::ChromaticAberration>
+[2m2026-08-13T03:52:53.633991Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_post_process::effect_stack::lens_distortion::LensDistortion>
+[2m2026-08-13T03:52:53.634017Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_post_process::effect_stack::lens_distortion::LensDistortion>
+[2m2026-08-13T03:52:53.634053Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_component::ExtractComponentPlugin<bevy_post_process::effect_stack::vignette::Vignette>
+[2m2026-08-13T03:52:53.634079Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::sync_component::SyncComponentPlugin<bevy_post_process::effect_stack::vignette::Vignette>
+[2m2026-08-13T03:52:53.634107Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_sprite::SpritePlugin
+[2m2026-08-13T03:52:53.634110Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite::SpritePlugin
+[2m2026-08-13T03:52:53.634190Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite::picking_backend::SpritePickingPlugin
+[2m2026-08-13T03:52:53.634214Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_sprite_render::SpriteRenderPlugin
+[2m2026-08-13T03:52:53.634218Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::SpriteRenderPlugin
+[2m2026-08-13T03:52:53.634294Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::mesh2d::mesh::Mesh2dRenderPlugin
+[2m2026-08-13T03:52:53.634477Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::mesh2d::color_material::ColorMaterialPlugin
+[2m2026-08-13T03:52:53.634532Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::mesh2d::material::Material2dPlugin<bevy_sprite_render::mesh2d::color_material::ColorMaterial>
+[2m2026-08-13T03:52:53.634651Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_asset::RenderAssetPlugin<bevy_sprite_render::mesh2d::material::PreparedMaterial2d<bevy_sprite_render::mesh2d::color_material::ColorMaterial>, bevy_render::texture::gpu_image::GpuImage>
+[2m2026-08-13T03:52:53.634825Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::sprite_mesh::SpriteMeshPlugin
+[2m2026-08-13T03:52:53.634870Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::sprite_mesh::sprite_material::SpriteMaterialPlugin
+[2m2026-08-13T03:52:53.634905Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::mesh2d::material::Material2dPlugin<bevy_sprite_render::sprite_mesh::sprite_material::SpriteMaterial>
+[2m2026-08-13T03:52:53.634991Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_asset::RenderAssetPlugin<bevy_sprite_render::mesh2d::material::PreparedMaterial2d<bevy_sprite_render::sprite_mesh::sprite_material::SpriteMaterial>, bevy_render::texture::gpu_image::GpuImage>
+[2m2026-08-13T03:52:53.635110Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::tilemap_chunk::TilemapChunkPlugin
+[2m2026-08-13T03:52:53.635130Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::tilemap_chunk::tilemap_chunk_material::TilemapChunkMaterialPlugin
+[2m2026-08-13T03:52:53.635181Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_sprite_render::mesh2d::material::Material2dPlugin<bevy_sprite_render::tilemap_chunk::tilemap_chunk_material::TilemapChunkMaterial>
+[2m2026-08-13T03:52:53.635282Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_asset::RenderAssetPlugin<bevy_sprite_render::mesh2d::material::PreparedMaterial2d<bevy_sprite_render::tilemap_chunk::tilemap_chunk_material::TilemapChunkMaterial>, bevy_render::texture::gpu_image::GpuImage>
+[2m2026-08-13T03:52:53.635519Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_clipboard::ClipboardPlugin
+[2m2026-08-13T03:52:53.635527Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_clipboard::ClipboardPlugin
+[2m2026-08-13T03:52:53.635538Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_text::TextPlugin
+[2m2026-08-13T03:52:53.635541Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_text::TextPlugin
+[2m2026-08-13T03:52:53.635747Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui::UiPlugin
+[2m2026-08-13T03:52:53.635750Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui::UiPlugin
+[2m2026-08-13T03:52:53.635880Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_app::propagate::HierarchyPropagatePlugin<bevy_ui::ui_node::ComputedUiTargetCamera>
+[2m2026-08-13T03:52:53.635965Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_app::propagate::HierarchyPropagatePlugin<bevy_ui::ui_node::ComputedUiRenderTargetInfo>
+[2m2026-08-13T03:52:53.636023Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui::picking_backend::UiPickingPlugin
+[2m2026-08-13T03:52:53.636103Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui::accessibility::AccessibilityPlugin
+[2m2026-08-13T03:52:53.636177Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_render::UiRenderPlugin
+[2m2026-08-13T03:52:53.636180Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_render::UiRenderPlugin
+[2m2026-08-13T03:52:53.636469Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_render::ui_texture_slice_pipeline::UiTextureSlicerPlugin
+[2m2026-08-13T03:52:53.636558Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_render::gradient::GradientPlugin
+[2m2026-08-13T03:52:53.636648Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_render::box_shadow::BoxShadowPlugin
+[2m2026-08-13T03:52:53.636680Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_gilrs::GilrsPlugin
+[2m2026-08-13T03:52:53.636683Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gilrs::GilrsPlugin
+[2m2026-08-13T03:52:53.637168Z[0m [34mDEBUG[0m [2mgilrs::gamepad[0m[2m:[0m Loaded 716 mappings.
+[2m2026-08-13T03:52:53.643440Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_animation::AnimationPlugin
+[2m2026-08-13T03:52:53.643455Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_animation::AnimationPlugin
+[2m2026-08-13T03:52:53.643679Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_gizmos::GizmoPlugin
+[2m2026-08-13T03:52:53.643686Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gizmos::GizmoPlugin
+[2m2026-08-13T03:52:53.643875Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gizmos::aabb::AabbGizmoPlugin
+[2m2026-08-13T03:52:53.643928Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gizmos::frustum::FrustumGizmoPlugin
+[2m2026-08-13T03:52:53.644110Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gizmos::global::GlobalGizmosPlugin
+[2m2026-08-13T03:52:53.644165Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gizmos::skinned_mesh_bounds::SkinnedMeshBoundsGizmoPlugin
+[2m2026-08-13T03:52:53.644220Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_gizmos_render::GizmoRenderPlugin
+[2m2026-08-13T03:52:53.644223Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gizmos_render::GizmoRenderPlugin
+[2m2026-08-13T03:52:53.644296Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::uniform::UniformComponentPlugin<bevy_gizmos_render::LineGizmoUniform>
+[2m2026-08-13T03:52:53.644344Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::render_asset::RenderAssetPlugin<bevy_gizmos_render::GpuLineGizmo>
+[2m2026-08-13T03:52:53.644434Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_render::extract_resource::ExtractResourcePlugin<bevy_gizmos_render::LineGizmoEntities>
+[2m2026-08-13T03:52:53.644506Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_gizmos_render::pipeline_2d::LineGizmo2dPlugin
+[2m2026-08-13T03:52:53.644548Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_state::app::StatesPlugin
+[2m2026-08-13T03:52:53.644552Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_state::app::StatesPlugin
+[2m2026-08-13T03:52:53.644591Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::popover::PopoverPlugin
+[2m2026-08-13T03:52:53.644598Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::popover::PopoverPlugin
+[2m2026-08-13T03:52:53.644616Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::button::ButtonPlugin
+[2m2026-08-13T03:52:53.644619Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::button::ButtonPlugin
+[2m2026-08-13T03:52:53.644675Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::checkbox::CheckboxPlugin
+[2m2026-08-13T03:52:53.644678Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::checkbox::CheckboxPlugin
+[2m2026-08-13T03:52:53.644716Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::list::ListBoxPlugin
+[2m2026-08-13T03:52:53.644720Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::list::ListBoxPlugin
+[2m2026-08-13T03:52:53.644761Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::menu::MenuPlugin
+[2m2026-08-13T03:52:53.644764Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::menu::MenuPlugin
+[2m2026-08-13T03:52:53.644873Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::radio::RadioGroupPlugin
+[2m2026-08-13T03:52:53.644877Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::radio::RadioGroupPlugin
+[2m2026-08-13T03:52:53.644924Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::scrollarea::ScrollAreaPlugin
+[2m2026-08-13T03:52:53.644928Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::scrollarea::ScrollAreaPlugin
+[2m2026-08-13T03:52:53.644946Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::scrollbar::ScrollbarPlugin
+[2m2026-08-13T03:52:53.644949Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::scrollbar::ScrollbarPlugin
+[2m2026-08-13T03:52:53.644999Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::slider::SliderPlugin
+[2m2026-08-13T03:52:53.645002Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::slider::SliderPlugin
+[2m2026-08-13T03:52:53.645068Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_ui_widgets::text_input::EditableTextInputPlugin
+[2m2026-08-13T03:52:53.645071Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_ui_widgets::text_input::EditableTextInputPlugin
+[2m2026-08-13T03:52:53.645164Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_picking::input::PointerInputPlugin
+[2m2026-08-13T03:52:53.645167Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_picking::input::PointerInputPlugin
+[2m2026-08-13T03:52:53.645234Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_picking::PickingPlugin
+[2m2026-08-13T03:52:53.645237Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_picking::PickingPlugin
+[2m2026-08-13T03:52:53.645318Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_picking::InteractionPlugin
+[2m2026-08-13T03:52:53.645321Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_picking::InteractionPlugin
+[2m2026-08-13T03:52:53.645572Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_internal::default_plugins::IgnoreAmbiguitiesPlugin
+[2m2026-08-13T03:52:53.645579Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_internal::default_plugins::IgnoreAmbiguitiesPlugin
+[2m2026-08-13T03:52:53.645661Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_input_focus::tab_navigation::TabNavigationPlugin
+[2m2026-08-13T03:52:53.645738Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_flair_core::PropertyRegistryPlugin
+[2m2026-08-13T03:52:53.645741Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_core::PropertyRegistryPlugin
+[2m2026-08-13T03:52:53.645764Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_flair_core::impls::ImplComponentPropertiesPlugin
+[2m2026-08-13T03:52:53.645767Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_core::impls::ImplComponentPropertiesPlugin
+[2m2026-08-13T03:52:53.645774Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_camera::visibility::Visibility'
+[2m2026-08-13T03:52:53.645784Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_camera::visibility::Visibility' with id ComponentPropertyId(0)
+[2m2026-08-13T03:52:53.645795Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::ui_node::Node'
+[2m2026-08-13T03:52:53.645817Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.display' with id ComponentPropertyId(1)
+[2m2026-08-13T03:52:53.645821Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.box_sizing' with id ComponentPropertyId(2)
+[2m2026-08-13T03:52:53.645824Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.position_type' with id ComponentPropertyId(3)
+[2m2026-08-13T03:52:53.645827Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.overflow.x' with id ComponentPropertyId(4)
+[2m2026-08-13T03:52:53.645830Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.overflow.y' with id ComponentPropertyId(5)
+[2m2026-08-13T03:52:53.645833Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.scrollbar_width' with id ComponentPropertyId(6)
+[2m2026-08-13T03:52:53.645836Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.overflow_clip_margin' with id ComponentPropertyId(7)
+[2m2026-08-13T03:52:53.645839Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.left' with id ComponentPropertyId(8)
+[2m2026-08-13T03:52:53.645846Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.right' with id ComponentPropertyId(9)
+[2m2026-08-13T03:52:53.645849Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.top' with id ComponentPropertyId(10)
+[2m2026-08-13T03:52:53.645852Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.bottom' with id ComponentPropertyId(11)
+[2m2026-08-13T03:52:53.645862Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.width' with id ComponentPropertyId(12)
+[2m2026-08-13T03:52:53.645864Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.height' with id ComponentPropertyId(13)
+[2m2026-08-13T03:52:53.645867Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.min_width' with id ComponentPropertyId(14)
+[2m2026-08-13T03:52:53.645870Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.min_height' with id ComponentPropertyId(15)
+[2m2026-08-13T03:52:53.645872Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.max_width' with id ComponentPropertyId(16)
+[2m2026-08-13T03:52:53.645878Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.max_height' with id ComponentPropertyId(17)
+[2m2026-08-13T03:52:53.645881Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.aspect_ratio' with id ComponentPropertyId(18)
+[2m2026-08-13T03:52:53.645884Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.align_items' with id ComponentPropertyId(19)
+[2m2026-08-13T03:52:53.645886Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.justify_items' with id ComponentPropertyId(20)
+[2m2026-08-13T03:52:53.645888Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.align_self' with id ComponentPropertyId(21)
+[2m2026-08-13T03:52:53.645891Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.justify_self' with id ComponentPropertyId(22)
+[2m2026-08-13T03:52:53.645893Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.align_content' with id ComponentPropertyId(23)
+[2m2026-08-13T03:52:53.645896Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.justify_content' with id ComponentPropertyId(24)
+[2m2026-08-13T03:52:53.645898Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.direction' with id ComponentPropertyId(25)
+[2m2026-08-13T03:52:53.645901Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.margin.left' with id ComponentPropertyId(26)
+[2m2026-08-13T03:52:53.645903Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.margin.right' with id ComponentPropertyId(27)
+[2m2026-08-13T03:52:53.645909Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.margin.top' with id ComponentPropertyId(28)
+[2m2026-08-13T03:52:53.645911Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.margin.bottom' with id ComponentPropertyId(29)
+[2m2026-08-13T03:52:53.645914Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.padding.left' with id ComponentPropertyId(30)
+[2m2026-08-13T03:52:53.645916Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.padding.right' with id ComponentPropertyId(31)
+[2m2026-08-13T03:52:53.645919Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.padding.top' with id ComponentPropertyId(32)
+[2m2026-08-13T03:52:53.645927Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.padding.bottom' with id ComponentPropertyId(33)
+[2m2026-08-13T03:52:53.645930Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border.left' with id ComponentPropertyId(34)
+[2m2026-08-13T03:52:53.645934Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border.right' with id ComponentPropertyId(35)
+[2m2026-08-13T03:52:53.645936Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border.top' with id ComponentPropertyId(36)
+[2m2026-08-13T03:52:53.645939Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border.bottom' with id ComponentPropertyId(37)
+[2m2026-08-13T03:52:53.645941Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border_radius.top_left' with id ComponentPropertyId(38)
+[2m2026-08-13T03:52:53.645944Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border_radius.top_right' with id ComponentPropertyId(39)
+[2m2026-08-13T03:52:53.645947Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border_radius.bottom_right' with id ComponentPropertyId(40)
+[2m2026-08-13T03:52:53.645949Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.border_radius.bottom_left' with id ComponentPropertyId(41)
+[2m2026-08-13T03:52:53.645952Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.flex_direction' with id ComponentPropertyId(42)
+[2m2026-08-13T03:52:53.645954Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.flex_wrap' with id ComponentPropertyId(43)
+[2m2026-08-13T03:52:53.645957Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.flex_grow' with id ComponentPropertyId(44)
+[2m2026-08-13T03:52:53.645959Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.flex_shrink' with id ComponentPropertyId(45)
+[2m2026-08-13T03:52:53.645961Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.flex_basis' with id ComponentPropertyId(46)
+[2m2026-08-13T03:52:53.645964Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.row_gap' with id ComponentPropertyId(47)
+[2m2026-08-13T03:52:53.645966Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.column_gap' with id ComponentPropertyId(48)
+[2m2026-08-13T03:52:53.645969Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.grid_auto_flow' with id ComponentPropertyId(49)
+[2m2026-08-13T03:52:53.645971Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.grid_template_rows' with id ComponentPropertyId(50)
+[2m2026-08-13T03:52:53.645974Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.grid_template_columns' with id ComponentPropertyId(51)
+[2m2026-08-13T03:52:53.645976Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.grid_auto_rows' with id ComponentPropertyId(52)
+[2m2026-08-13T03:52:53.645979Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.grid_auto_columns' with id ComponentPropertyId(53)
+[2m2026-08-13T03:52:53.645981Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.grid_row' with id ComponentPropertyId(54)
+[2m2026-08-13T03:52:53.645984Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Node.grid_column' with id ComponentPropertyId(55)
+[2m2026-08-13T03:52:53.645988Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::ui_node::BackgroundColor'
+[2m2026-08-13T03:52:53.645994Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::BackgroundColor.0' with id ComponentPropertyId(56)
+[2m2026-08-13T03:52:53.645998Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::ui_node::Outline'
+[2m2026-08-13T03:52:53.646001Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Outline.width' with id ComponentPropertyId(57)
+[2m2026-08-13T03:52:53.646004Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Outline.offset' with id ComponentPropertyId(58)
+[2m2026-08-13T03:52:53.646006Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::Outline.color' with id ComponentPropertyId(59)
+[2m2026-08-13T03:52:53.646009Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::ui_node::BorderColor'
+[2m2026-08-13T03:52:53.646013Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::BorderColor.top' with id ComponentPropertyId(60)
+[2m2026-08-13T03:52:53.646015Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::BorderColor.right' with id ComponentPropertyId(61)
+[2m2026-08-13T03:52:53.646018Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::BorderColor.bottom' with id ComponentPropertyId(62)
+[2m2026-08-13T03:52:53.646020Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::BorderColor.left' with id ComponentPropertyId(63)
+[2m2026-08-13T03:52:53.646023Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::ui_node::BoxShadow'
+[2m2026-08-13T03:52:53.646026Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::BoxShadow' with id ComponentPropertyId(64)
+[2m2026-08-13T03:52:53.646031Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::ui_node::ZIndex'
+[2m2026-08-13T03:52:53.646034Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_node::ZIndex' with id ComponentPropertyId(65)
+[2m2026-08-13T03:52:53.646037Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::ui_transform::UiTransform'
+[2m2026-08-13T03:52:53.646040Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_transform::UiTransform.translation' with id ComponentPropertyId(66)
+[2m2026-08-13T03:52:53.646043Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_transform::UiTransform.scale' with id ComponentPropertyId(67)
+[2m2026-08-13T03:52:53.646046Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::ui_transform::UiTransform.rotation' with id ComponentPropertyId(68)
+[2m2026-08-13T03:52:53.646049Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::gradients::BackgroundGradient'
+[2m2026-08-13T03:52:53.646051Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::gradients::BackgroundGradient' with id ComponentPropertyId(69)
+[2m2026-08-13T03:52:53.646055Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::gradients::BorderGradient'
+[2m2026-08-13T03:52:53.646057Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::gradients::BorderGradient' with id ComponentPropertyId(70)
+[2m2026-08-13T03:52:53.646060Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::widget::image::ImageNode'
+[2m2026-08-13T03:52:53.646066Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::image::ImageNode.color' with id ComponentPropertyId(71)
+[2m2026-08-13T03:52:53.646069Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::image::ImageNode.image' with id ComponentPropertyId(72)
+[2m2026-08-13T03:52:53.646071Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::image::ImageNode.texture_atlas' with id ComponentPropertyId(73)
+[2m2026-08-13T03:52:53.646074Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::image::ImageNode.flip_x' with id ComponentPropertyId(74)
+[2m2026-08-13T03:52:53.646076Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::image::ImageNode.flip_y' with id ComponentPropertyId(75)
+[2m2026-08-13T03:52:53.646079Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::image::ImageNode.rect' with id ComponentPropertyId(76)
+[2m2026-08-13T03:52:53.646083Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::image::ImageNode.image_mode' with id ComponentPropertyId(77)
+[2m2026-08-13T03:52:53.646086Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_text::text::TextColor'
+[2m2026-08-13T03:52:53.646092Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextColor.0' with id ComponentPropertyId(78)
+[2m2026-08-13T03:52:53.646096Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_text::text::LineHeight'
+[2m2026-08-13T03:52:53.646099Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::LineHeight' with id ComponentPropertyId(79)
+[2m2026-08-13T03:52:53.646102Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_text::text::LetterSpacing'
+[2m2026-08-13T03:52:53.646104Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::LetterSpacing' with id ComponentPropertyId(80)
+[2m2026-08-13T03:52:53.646107Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_text::text::TextFont'
+[2m2026-08-13T03:52:53.646112Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.font' with id ComponentPropertyId(81)
+[2m2026-08-13T03:52:53.646114Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.font_size' with id ComponentPropertyId(82)
+[2m2026-08-13T03:52:53.646117Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.weight' with id ComponentPropertyId(83)
+[2m2026-08-13T03:52:53.646119Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.width' with id ComponentPropertyId(84)
+[2m2026-08-13T03:52:53.646122Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.style' with id ComponentPropertyId(85)
+[2m2026-08-13T03:52:53.646124Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.font_smoothing' with id ComponentPropertyId(86)
+[2m2026-08-13T03:52:53.646127Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.font_features' with id ComponentPropertyId(87)
+[2m2026-08-13T03:52:53.646129Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextFont.font_variations' with id ComponentPropertyId(88)
+[2m2026-08-13T03:52:53.646134Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_text::text::TextLayout'
+[2m2026-08-13T03:52:53.646137Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextLayout.justify' with id ComponentPropertyId(89)
+[2m2026-08-13T03:52:53.646139Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextLayout.linebreak' with id ComponentPropertyId(90)
+[2m2026-08-13T03:52:53.646142Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_ui::widget::text::TextShadow'
+[2m2026-08-13T03:52:53.646145Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_ui::widget::text::TextShadow' with id ComponentPropertyId(91)
+[2m2026-08-13T03:52:53.646148Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_text::text::TextSpan'
+[2m2026-08-13T03:52:53.646151Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_text::text::TextSpan.0' with id ComponentPropertyId(92)
+[2m2026-08-13T03:52:53.646154Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering properties of component 'bevy_flair_core::helper_components::text::TextDecoration'
+[2m2026-08-13T03:52:53.646157Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_flair_core::helper_components::text::TextDecoration.line' with id ComponentPropertyId(93)
+[2m2026-08-13T03:52:53.646160Z[0m [34mDEBUG[0m [2mbevy_flair_core::registry[0m[2m:[0m Registering property 'bevy_flair_core::helper_components::text::TextDecoration.color' with id ComponentPropertyId(94)
+[2m2026-08-13T03:52:53.646201Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_flair_style::FlairStylePlugin
+[2m2026-08-13T03:52:53.646203Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_style::FlairStylePlugin
+[2m2026-08-13T03:52:53.646453Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_style::animations::reflect::ReflectAnimationsPlugin
+[2m2026-08-13T03:52:53.646467Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_style::placeholder::PlaceholderResolvePlugin
+[2m2026-08-13T03:52:53.646647Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_flair_style::FlairDefaultStyleAnimationsPlugin
+[2m2026-08-13T03:52:53.646653Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_style::FlairDefaultStyleAnimationsPlugin
+[2m2026-08-13T03:52:53.646693Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_style::FlairStyleAnimationsPlugin<bevy_time::real::Real>
+[2m2026-08-13T03:52:53.646708Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_flair_css_parser::FlairCssParserPlugin
+[2m2026-08-13T03:52:53.646710Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_css_parser::FlairCssParserPlugin
+[2m2026-08-13T03:52:53.646802Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_css_parser::reflect::ReflectParsePlugin
+[2m2026-08-13T03:52:53.646847Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_flair_css_parser::shorthand::ShorthandPropertiesPlugin
+[2m2026-08-13T03:52:53.646935Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_enhanced_input::EnhancedInputPlugin
+[2m2026-08-13T03:52:53.647264Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::plugin::ClientPlugin
+[2m2026-08-13T03:52:53.647434Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::network::NetworkClientPlugin
+[2m2026-08-13T03:52:53.647475Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_replicon::shared::RepliconSharedPlugin
+[2m2026-08-13T03:52:53.647482Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_replicon::shared::RepliconSharedPlugin
+[2m2026-08-13T03:52:53.647831Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding client event `ProtocolHash`
+[2m2026-08-13T03:52:53.647842Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::backend::channels[0m[2m:[0m creating a client channel with ID 1
+[2m2026-08-13T03:52:53.647871Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding server event `ProtocolMismatch`
+[2m2026-08-13T03:52:53.647875Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::backend::channels[0m[2m:[0m creating a server channel with ID 2
+[2m2026-08-13T03:52:53.647905Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m making event `ProtocolMismatch` independent
+[2m2026-08-13T03:52:53.647910Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_replicon::server::ServerPlugin
+[2m2026-08-13T03:52:53.647913Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_replicon::server::ServerPlugin
+[2m2026-08-13T03:52:53.648096Z[0m [34mDEBUG[0m [2mbevy_replicon::server[0m[2m:[0m using tick schedule `FixedPostUpdate`
+[2m2026-08-13T03:52:53.648103Z[0m [34mDEBUG[0m [2mbevy_replicon::server[0m[2m:[0m using authorization method `ProtocolCheck`
+[2m2026-08-13T03:52:53.648122Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_replicon::server::message::ServerMessagePlugin
+[2m2026-08-13T03:52:53.648125Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_replicon::server::message::ServerMessagePlugin
+[2m2026-08-13T03:52:53.648128Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_replicon::client::ClientPlugin
+[2m2026-08-13T03:52:53.648131Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_replicon::client::ClientPlugin
+[2m2026-08-13T03:52:53.648223Z[0m [34mDEBUG[0m [2mbevy_replicon::client[0m[2m:[0m using authorization method `ProtocolCheck`
+[2m2026-08-13T03:52:53.648245Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_replicon::client::message::ClientMessagePlugin
+[2m2026-08-13T03:52:53.648248Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_replicon::client::message::ClientMessagePlugin
+[2m2026-08-13T03:52:53.648308Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_replicon_renet::server::RepliconRenetServerPlugin
+[2m2026-08-13T03:52:53.648311Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_replicon_renet::server::RepliconRenetServerPlugin
+[2m2026-08-13T03:52:53.648359Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_renet::RenetServerPlugin
+[2m2026-08-13T03:52:53.648448Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_renet::netcode::NetcodeServerPlugin
+[2m2026-08-13T03:52:53.648461Z[0m [34mDEBUG[0m [2mbevy_app::plugin_group[0m[2m:[0m added plugin: bevy_replicon_renet::client::RepliconRenetClientPlugin
+[2m2026-08-13T03:52:53.648464Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_replicon_renet::client::RepliconRenetClientPlugin
+[2m2026-08-13T03:52:53.648502Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_renet::RenetClientPlugin
+[2m2026-08-13T03:52:53.648554Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: bevy_renet::netcode::NetcodeClientPlugin
+[2m2026-08-13T03:52:53.648608Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::input::InputPlugin
+[2m2026-08-13T03:52:53.648612Z[0m [34mDEBUG[0m [2mbevy_enhanced_input::context[0m[2m:[0m registering `OnFoot` for `PreUpdate`
+[2m2026-08-13T03:52:53.648749Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::sprites::plugin::GameSpritesPlugin
+[2m2026-08-13T03:52:53.648778Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::sprites::wall::WallSpritePlugin
+[2m2026-08-13T03:52:53.648856Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::sprites::tile::TileSpritePlugin
+[2m2026-08-13T03:52:53.648988Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::prototype::PrototypeClientPlugin
+[2m2026-08-13T03:52:53.649027Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_client::map::plugin::MapClientPlugin
+[2m2026-08-13T03:52:53.649094Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_shared::plugin::SharedPlugin
+[2m2026-08-13T03:52:53.649125Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_shared::prototype::plugin::PrototypePlugin
+[2m2026-08-13T03:52:53.649135Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding replication rule `RuleFns<PrototypeId>` with priority 1
+[2m2026-08-13T03:52:53.649189Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_shared::actions::ActionPlugin
+[2m2026-08-13T03:52:53.649193Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding client event `PlayerMove`
+[2m2026-08-13T03:52:53.649197Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::backend::channels[0m[2m:[0m creating a client channel with ID 2
+[2m2026-08-13T03:52:53.649246Z[0m [34mDEBUG[0m [2mbevy_app::app[0m[2m:[0m added plugin: microstation_bevy_shared::map::plugin::GridPlugin
+[2m2026-08-13T03:52:53.649255Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding replication rule `RuleFns<TileChunk>` with priority 1
+[2m2026-08-13T03:52:53.649266Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding replication rule `RuleFns<TileRegistry>` with priority 1
+[2m2026-08-13T03:52:53.649284Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::replication::signature[0m[2m:[0m inserting hash 0x5f630cafc3655d41 for `451v0`
+[2m2026-08-13T03:52:53.649291Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding replication rule `RuleFns<Position>` with priority 1
+[2m2026-08-13T03:52:53.649305Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding replication rule `RuleFns<PlayerId>` with priority 1
+[2m2026-08-13T03:52:53.649311Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding replication rule `RuleFns<MoveSpeed>` with priority 1
+[2m2026-08-13T03:52:53.649317Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m adding replication rule `RuleFns<Name>` with priority 1
+[2m2026-08-13T03:52:53.668936Z[0m [34mDEBUG[0m [2mbevy_flair_css_parser[0m[2m:[0m PropertyRegistry contains 95 registered properties
+[2m2026-08-13T03:52:53.669009Z[0m [34mDEBUG[0m [2mbevy_enhanced_input::context[0m[2m:[0m setting up systems for `PreUpdate`
+[2m2026-08-13T03:52:53.669139Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::protocol[0m[2m:[0m calculated hash: 10443485014719344153
+[2m2026-08-13T03:52:53.669401Z[0m [32m INFO[0m [2mbevy_winit::system[0m[2m:[0m Creating new window Client (66v0)
+[2m2026-08-13T03:52:53.669419Z[0m [34mDEBUG[0m [2mbevy_winit::winit_windows[0m[2m:[0m Display information:  Window physical resolution: 1280x720  Window logical resolution: 1280x720  Monitor name:   Scale factor: 0  Refresh rate (Hz): 0.000
+[2m2026-08-13T03:52:53.672380Z[0m [34mDEBUG[0m [2mbevy_replicon::client[0m[2m:[0m disconnected
+[2m2026-08-13T03:52:53.672455Z[0m [34mDEBUG[0m [2mbevy_replicon::server[0m[2m:[0m stopped
+[2m2026-08-13T03:52:53.672697Z[0m [32m INFO[0m [2mmicrostation_bevy_client::network[0m[2m:[0m Connect to 127.0.0.1:5000
+[2m2026-08-13T03:52:53.673630Z[0m [34mDEBUG[0m [2mbevy_flair_style::systems[0m[2m:[0m Setting window media features to 66v0: WindowMediaFeatures { color_scheme: None }
+[2m2026-08-13T03:52:53.677004Z[0m [34mDEBUG[0m [2mbevy_replicon::client[0m[2m:[0m connecting
+[2m2026-08-13T03:52:53.677353Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::sprites::tile[0m[2m:[0m reloaded tile sprites
+[2m2026-08-13T03:52:53.678768Z[0m [34mDEBUG[0m [2mbevy_replicon::server::replication_query[0m[2m:[0m initializing with 7 replication rules
+[2m2026-08-13T03:52:53.691090Z[0m [32m INFO[0m [2mbevy_render::batching::gpu_preprocessing[0m[2m:[0m GPU preprocessing is fully supported on this device.
+[2m2026-08-13T03:52:53.707754Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Getting node 0 from freelist[131071]
+[2m2026-08-13T03:52:53.707798Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Free storage: 16777216 (+16777216) (insert_node_into_bin)
+[2m2026-08-13T03:52:53.707808Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Free storage: 0 (-16777216) (allocate)
+[2m2026-08-13T03:52:53.707815Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Getting node 1 from freelist[131070]
+[2m2026-08-13T03:52:53.707821Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Free storage: 16777212 (+16777212) (insert_node_into_bin)
+[2m2026-08-13T03:52:53.710660Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Getting node 0 from freelist[131071]
+[2m2026-08-13T03:52:53.710680Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Free storage: 134217728 (+134217728) (insert_node_into_bin)
+[2m2026-08-13T03:52:53.710687Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Free storage: 0 (-134217728) (allocate)
+[2m2026-08-13T03:52:53.710693Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Getting node 1 from freelist[131070]
+[2m2026-08-13T03:52:53.710699Z[0m [34mDEBUG[0m [2moffset_allocator[0m[2m:[0m Free storage: 134217722 (+134217722) (insert_node_into_bin)
+[2m2026-08-13T03:52:53.715102Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 50, generation: 0}, with shader defs []
+[2m2026-08-13T03:52:53.717617Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 62, generation: 0}, with shader defs []
+[2m2026-08-13T03:52:53.719468Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 9, generation: 0}, with shader defs [Bool("MULTISAMPLE", true)]
+[2m2026-08-13T03:52:53.733810Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 9, generation: 0}, with shader defs []
+[2m2026-08-13T03:52:53.783129Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 74, generation: 0}, with shader defs []
+[2m2026-08-13T03:52:53.785802Z[0m [31mERROR[0m [2mwgpu_hal::vulkan::instance[0m[2m:[0m VALIDATION [VUID-VkPresentInfoKHR-pImageIndices-01430 (0x48ad24c6)]
+	vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x780000000078 is in VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[2m2026-08-13T03:52:53.785848Z[0m [31mERROR[0m [2mwgpu_hal::vulkan::instance[0m[2m:[0m 	objects: (type: IMAGE, hndl: 0x780000000078, name: ?)
+[2m2026-08-13T03:52:53.786222Z[0m [34mDEBUG[0m [2mbevy_render::view::window[0m[2m:[0m Window size changed from 1280x720 to 1119x1361
+[2m2026-08-13T03:52:53.787463Z[0m [34mDEBUG[0m [2mbevy_replicon::client[0m[2m:[0m connected
+[2m2026-08-13T03:52:53.787461Z[0m [34mDEBUG[0m [2mbevy_replicon::client[0m[2m:[0m sending `ProtocolHash(10443485014719344153)` to the server
+[2m2026-08-13T03:52:53.787897Z[0m [34mDEBUG[0m [2mbevy_replicon::shared::message::client_message[0m[2m:[0m sending message `ClientMessageEvent<ProtocolHash>`
+[2m2026-08-13T03:52:53.789112Z[0m [31mERROR[0m [2mwgpu_hal::vulkan::instance[0m[2m:[0m VALIDATION [VUID-VkPresentInfoKHR-pImageIndices-01430 (0x48ad24c6)]
+	vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x790000000079 is in VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[2m2026-08-13T03:52:53.789152Z[0m [31mERROR[0m [2mwgpu_hal::vulkan::instance[0m[2m:[0m 	objects: (type: IMAGE, hndl: 0x790000000079, name: ?)
+[2m2026-08-13T03:52:53.792086Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 66, generation: 0}, with shader defs []
+[2m2026-08-13T03:52:53.796671Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 80, generation: 0}, with shader defs [Bool("TONEMAP_IN_SHADER", true), UInt("TONEMAPPING_LUT_TEXTURE_BINDING_INDEX", 1), UInt("TONEMAPPING_LUT_SAMPLER_BINDING_INDEX", 2), Bool("TONEMAP_METHOD_NONE", true)]
+[2m2026-08-13T03:52:53.813188Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 73, generation: 0}, with shader defs [UInt("TONEMAPPING_LUT_TEXTURE_BINDING_INDEX", 3), UInt("TONEMAPPING_LUT_SAMPLER_BINDING_INDEX", 4), Bool("TONEMAP_METHOD_NONE", true)]
+[2m2026-08-13T03:52:53.820526Z[0m [34mDEBUG[0m [2mbevy_shader::shader_cache[0m[2m:[0m processing shader AssetId<bevy_shader::shader::Shader>{ index: 75, generation: 0}, with shader defs []
+[2m2026-08-13T03:52:53.825101Z[0m [34mDEBUG[0m [2mbevy_replicon::client[0m[2m:[0m mapping `79v0` to `451v0` using hash 0x5f630cafc3655d41
+[2m2026-08-13T03:52:53.825238Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 477v0 added at [0, 0]
+[2m2026-08-13T03:52:53.825304Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 478v0 added at [1, 0]
+[2m2026-08-13T03:52:53.825315Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 479v0 added at [2, 0]
+[2m2026-08-13T03:52:53.825323Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 480v0 added at [0, 1]
+[2m2026-08-13T03:52:53.825330Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 481v0 added at [1, 1]
+[2m2026-08-13T03:52:53.825341Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 482v0 added at [2, 1]
+[2m2026-08-13T03:52:53.825349Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 483v0 added at [0, 2]
+[2m2026-08-13T03:52:53.825356Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 484v0 added at [1, 2]
+[2m2026-08-13T03:52:53.825363Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::map::chunk[0m[2m:[0m chunk 485v0 added at [2, 2]
+[2m2026-08-13T03:52:53.825846Z[0m [34mDEBUG[0m [2mbevy_enhanced_input::context[0m[2m:[0m registering `OnFoot` to `522v0` with priority 0
+[2m2026-08-13T03:52:53.825863Z[0m [34mDEBUG[0m [2mbevy_enhanced_input::context[0m[2m:[0m setting activity of `OnFoot` to `true`
+[2m2026-08-13T03:52:53.826610Z[0m [31mERROR[0m [2mmicrostation_bevy_client::sprites::chunk[0m[2m:[0m no tile with index 1 in tile cache
+[2m2026-08-13T03:52:53.826643Z[0m [31mERROR[0m [2mmicrostation_bevy_client::sprites::chunk[0m[2m:[0m tile cache: Res(TileSprites { sprites: [], indexes: {} })
+[2m2026-08-13T03:52:53.826953Z[0m [34mDEBUG[0m [2mmicrostation_bevy_client::sprites::tile[0m[2m:[0m reloaded tile sprites
+[2m2026-08-13T03:52:55.009422Z[0m [32m INFO[0m [2mbevy_window::system[0m[2m:[0m No windows are open, exiting
+[2m2026-08-13T03:52:55.009476Z[0m [32m INFO[0m [2mbevy_winit::system[0m[2m:[0m Closing window 66v0
+[2m2026-08-13T03:52:55.022459Z[0m [34mDEBUG[0m [2mbevy_render::pipelined_rendering[0m[2m:[0m exiting pipelined rendering thread
